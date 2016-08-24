@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C965C6461D6B7A8700896813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C6451D6B7A8700896813 /* AppDelegate.swift */; };
+		C965C6481D6B7A8700896813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C6471D6B7A8700896813 /* ViewController.swift */; };
+		C965C64B1D6B7A8700896813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C965C6491D6B7A8700896813 /* Main.storyboard */; };
+		C965C6501D6B7A8700896813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C965C64E1D6B7A8700896813 /* LaunchScreen.storyboard */; };
+		C965C6581D6B7B3100896813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C965C6571D6B7B3100896813 /* Assets.xcassets */; };
+		C965C65A1D6B7BAF00896813 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C6591D6B7BAF00896813 /* CustomViewController.swift */; };
+		C965C65F1D6B7BBF00896813 /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C65B1D6B7BBF00896813 /* FullScreenImageViewController.swift */; };
+		C965C6601D6B7BBF00896813 /* HomeScreenTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C65C1D6B7BBF00896813 /* HomeScreenTabBarController.swift */; };
+		C965C6611D6B7BBF00896813 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C65D1D6B7BBF00896813 /* HomeScreenViewController.swift */; };
+		C965C6621D6B7BBF00896813 /* ImageGalleryNavigationControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C65E1D6B7BBF00896813 /* ImageGalleryNavigationControllerViewController.swift */; };
+		C965C6681D6B7BDC00896813 /* ImageGalleryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C6631D6B7BDC00896813 /* ImageGalleryTableViewController.swift */; };
+		C965C6691D6B7BDC00896813 /* ImageGalleryTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C6641D6B7BDC00896813 /* ImageGalleryTestViewController.swift */; };
+		C965C66A1D6B7BDC00896813 /* PlanetTrackHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C6651D6B7BDC00896813 /* PlanetTrackHelpViewController.swift */; };
+		C965C66B1D6B7BDC00896813 /* PlanetTrackNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C6661D6B7BDC00896813 /* PlanetTrackNavigationController.swift */; };
+		C965C66C1D6B7BDC00896813 /* PlanetTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C6671D6B7BDC00896813 /* PlanetTrackViewController.swift */; };
+		C965C66E1D6CAB5B00896813 /* SkyTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C66D1D6CAB5B00896813 /* SkyTrackViewController.swift */; };
+		C965C6701D6CB24F00896813 /* RelativeDistancesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C66F1D6CB24F00896813 /* RelativeDistancesViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C965C6421D6B7A8700896813 /* PlanetTrack2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetTrack2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C965C6451D6B7A8700896813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C965C6471D6B7A8700896813 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C965C64A1D6B7A8700896813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C965C64F1D6B7A8700896813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C965C6511D6B7A8700896813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C965C6571D6B7B3100896813 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C965C6591D6B7BAF00896813 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		C965C65B1D6B7BBF00896813 /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
+		C965C65C1D6B7BBF00896813 /* HomeScreenTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenTabBarController.swift; sourceTree = "<group>"; };
+		C965C65D1D6B7BBF00896813 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		C965C65E1D6B7BBF00896813 /* ImageGalleryNavigationControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryNavigationControllerViewController.swift; sourceTree = "<group>"; };
+		C965C6631D6B7BDC00896813 /* ImageGalleryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryTableViewController.swift; sourceTree = "<group>"; };
+		C965C6641D6B7BDC00896813 /* ImageGalleryTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryTestViewController.swift; sourceTree = "<group>"; };
+		C965C6651D6B7BDC00896813 /* PlanetTrackHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetTrackHelpViewController.swift; sourceTree = "<group>"; };
+		C965C6661D6B7BDC00896813 /* PlanetTrackNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetTrackNavigationController.swift; sourceTree = "<group>"; };
+		C965C6671D6B7BDC00896813 /* PlanetTrackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetTrackViewController.swift; sourceTree = "<group>"; };
+		C965C66D1D6CAB5B00896813 /* SkyTrackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyTrackViewController.swift; sourceTree = "<group>"; };
+		C965C66F1D6CB24F00896813 /* RelativeDistancesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelativeDistancesViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C965C63F1D6B7A8700896813 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C965C6391D6B7A8700896813 = {
+			isa = PBXGroup;
+			children = (
+				C965C6441D6B7A8700896813 /* PlanetTrack2 */,
+				C965C6431D6B7A8700896813 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C965C6431D6B7A8700896813 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C965C6421D6B7A8700896813 /* PlanetTrack2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C965C6441D6B7A8700896813 /* PlanetTrack2 */ = {
+			isa = PBXGroup;
+			children = (
+				C9BE9E3A1D6DF22300852F02 /* Third Party Libs */,
+				C965C6451D6B7A8700896813 /* AppDelegate.swift */,
+				C965C6471D6B7A8700896813 /* ViewController.swift */,
+				C965C6591D6B7BAF00896813 /* CustomViewController.swift */,
+				C965C6491D6B7A8700896813 /* Main.storyboard */,
+				C965C64E1D6B7A8700896813 /* LaunchScreen.storyboard */,
+				C965C6571D6B7B3100896813 /* Assets.xcassets */,
+				C965C65B1D6B7BBF00896813 /* FullScreenImageViewController.swift */,
+				C965C65C1D6B7BBF00896813 /* HomeScreenTabBarController.swift */,
+				C965C65D1D6B7BBF00896813 /* HomeScreenViewController.swift */,
+				C965C65E1D6B7BBF00896813 /* ImageGalleryNavigationControllerViewController.swift */,
+				C965C6511D6B7A8700896813 /* Info.plist */,
+				C965C6631D6B7BDC00896813 /* ImageGalleryTableViewController.swift */,
+				C965C6641D6B7BDC00896813 /* ImageGalleryTestViewController.swift */,
+				C965C6651D6B7BDC00896813 /* PlanetTrackHelpViewController.swift */,
+				C965C6661D6B7BDC00896813 /* PlanetTrackNavigationController.swift */,
+				C965C6671D6B7BDC00896813 /* PlanetTrackViewController.swift */,
+				C965C66D1D6CAB5B00896813 /* SkyTrackViewController.swift */,
+				C965C66F1D6CB24F00896813 /* RelativeDistancesViewController.swift */,
+			);
+			path = PlanetTrack2;
+			sourceTree = "<group>";
+		};
+		C9BE9E3A1D6DF22300852F02 /* Third Party Libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Third Party Libs";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C965C6411D6B7A8700896813 /* PlanetTrack2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C965C6541D6B7A8700896813 /* Build configuration list for PBXNativeTarget "PlanetTrack2" */;
+			buildPhases = (
+				C965C63E1D6B7A8700896813 /* Sources */,
+				C965C63F1D6B7A8700896813 /* Frameworks */,
+				C965C6401D6B7A8700896813 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlanetTrack2;
+			productName = PlanetTrack2;
+			productReference = C965C6421D6B7A8700896813 /* PlanetTrack2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C965C63A1D6B7A8700896813 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Matt Milner";
+				TargetAttributes = {
+					C965C6411D6B7A8700896813 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = C965C63D1D6B7A8700896813 /* Build configuration list for PBXProject "PlanetTrack2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C965C6391D6B7A8700896813;
+			productRefGroup = C965C6431D6B7A8700896813 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C965C6411D6B7A8700896813 /* PlanetTrack2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C965C6401D6B7A8700896813 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C965C6501D6B7A8700896813 /* LaunchScreen.storyboard in Resources */,
+				C965C6581D6B7B3100896813 /* Assets.xcassets in Resources */,
+				C965C64B1D6B7A8700896813 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C965C63E1D6B7A8700896813 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C965C65A1D6B7BAF00896813 /* CustomViewController.swift in Sources */,
+				C965C66B1D6B7BDC00896813 /* PlanetTrackNavigationController.swift in Sources */,
+				C965C6691D6B7BDC00896813 /* ImageGalleryTestViewController.swift in Sources */,
+				C965C6481D6B7A8700896813 /* ViewController.swift in Sources */,
+				C965C6681D6B7BDC00896813 /* ImageGalleryTableViewController.swift in Sources */,
+				C965C66E1D6CAB5B00896813 /* SkyTrackViewController.swift in Sources */,
+				C965C6601D6B7BBF00896813 /* HomeScreenTabBarController.swift in Sources */,
+				C965C66C1D6B7BDC00896813 /* PlanetTrackViewController.swift in Sources */,
+				C965C6461D6B7A8700896813 /* AppDelegate.swift in Sources */,
+				C965C65F1D6B7BBF00896813 /* FullScreenImageViewController.swift in Sources */,
+				C965C66A1D6B7BDC00896813 /* PlanetTrackHelpViewController.swift in Sources */,
+				C965C6621D6B7BBF00896813 /* ImageGalleryNavigationControllerViewController.swift in Sources */,
+				C965C6611D6B7BBF00896813 /* HomeScreenViewController.swift in Sources */,
+				C965C6701D6CB24F00896813 /* RelativeDistancesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C965C6491D6B7A8700896813 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C965C64A1D6B7A8700896813 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C965C64E1D6B7A8700896813 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C965C64F1D6B7A8700896813 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C965C6521D6B7A8700896813 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C965C6531D6B7A8700896813 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C965C6551D6B7A8700896813 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = PlanetTrack2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theironyard.houston.PlanetTrack2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C965C6561D6B7A8700896813 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = PlanetTrack2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theironyard.houston.PlanetTrack2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C965C63D1D6B7A8700896813 /* Build configuration list for PBXProject "PlanetTrack2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C965C6521D6B7A8700896813 /* Debug */,
+				C965C6531D6B7A8700896813 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C965C6541D6B7A8700896813 /* Build configuration list for PBXNativeTarget "PlanetTrack2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C965C6551D6B7A8700896813 /* Debug */,
+				C965C6561D6B7A8700896813 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C965C63A1D6B7A8700896813 /* Project object */;
+}
