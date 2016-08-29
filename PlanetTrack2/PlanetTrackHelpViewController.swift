@@ -22,7 +22,7 @@ class PlanetTrackHelpViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+    }    
     
     private func setupTutorial() {
     
@@ -97,7 +97,7 @@ class PlanetTrackHelpViewController: UIViewController {
                 UIView.animateWithDuration(2.5, animations: {
                     
                     tutorialText2.alpha = 1.0
-                    fingerpointView.frame = CGRect(x: 163, y: 193, width: 60, height: 60)
+                    fingerpointView.frame = CGRect(x: 168, y: 193, width: 60, height: 60)
                     
                     
                     }, completion: { (y) in
@@ -114,7 +114,7 @@ class PlanetTrackHelpViewController: UIViewController {
                                 UIView.animateWithDuration(2.5, animations: {
                                     
                                     tutorialText4.alpha = 1.0
-                                    fingerpointView.frame = CGRect(x: 228, y: 193, width: 60, height: 60)
+                                    fingerpointView.frame = CGRect(x: 233, y: 193, width: 60, height: 60)
                                     
                                     
                                     }, completion: { (a) in

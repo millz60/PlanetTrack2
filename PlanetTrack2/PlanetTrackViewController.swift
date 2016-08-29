@@ -111,7 +111,7 @@ class PlanetTrackViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         self.title = "PlanetTrack"
         self.planetsDisplayText.text = "Sun to Mercury"
         
@@ -154,10 +154,11 @@ class PlanetTrackViewController: UIViewController {
         
 
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     
     @IBAction func leftPlanetSelected() {
     
@@ -509,7 +510,7 @@ class PlanetTrackViewController: UIViewController {
         // Steps 1, 2, and 3
         
         let currentTime = NSDate()
-        print("currentTime: \(currentTime)")
+//        print("currentTime: \(currentTime)")
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.timeZone = NSTimeZone(name: "UTC")
@@ -599,18 +600,18 @@ class PlanetTrackViewController: UIViewController {
         
         let datecomponenets = calendar.components(NSCalendarUnit.Second, fromDate: previousDate as! NSDate, toDate: nextDate as! NSDate, options: [])
         let seconds = datecomponenets.second
-        print("Seconds: \(seconds)")
+//        print("Seconds: \(seconds)")
         
         let halfSecondsBetweenDates = seconds * 2
         let secondsPassedSincePreviousDateComponents = calendar.components(.Second, fromDate: previousDate as! NSDate, toDate: currentTime as! NSDate, options: [])
         self.secondsPassedSincePreviousDate = Double(secondsPassedSincePreviousDateComponents.second)
-        print("secondsPassedSincePreviousDate: \(secondsPassedSincePreviousDate)")
+//        print("secondsPassedSincePreviousDate: \(secondsPassedSincePreviousDate)")
         
         ratePerHalfSecond = (nextDistanceDouble - prevDistanceDouble) / Double(halfSecondsBetweenDates)
         
         self.actualDistance = prevDistanceDouble + (ratePerHalfSecond * secondsPassedSincePreviousDate)
         
-        print(ratePerHalfSecond)
+//        print(ratePerHalfSecond)
         
     }
     

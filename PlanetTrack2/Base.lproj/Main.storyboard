@@ -47,6 +47,9 @@
                                             <color key="titleColor" red="1" green="0.85592324210000004" blue="0.088734132849999994" alpha="0.90793993790000005" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="GtV-7N-4Ck" kind="show" identifier="SolarSystemFactsSegue" id="Wjl-X1-jZV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5D8-a7-Jih">
                                         <rect key="frame" x="0.0" y="84" width="235" height="42"/>
@@ -165,7 +168,14 @@
                             <constraint firstItem="1o3-65-h5j" firstAttribute="leading" secondItem="7kc-fz-zqK" secondAttribute="leadingMargin" id="rJf-01-lwn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vqk-aX-FBB"/>
+                    <navigationItem key="navigationItem" id="vqk-aX-FBB">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Main Menu" id="n23-X4-jDb">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="fOf-bl-VGe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ImageTableView" destination="1o3-65-h5j" id="rAR-KW-jW0"/>
                     </connections>
@@ -691,7 +701,7 @@
                     <connections>
                         <segue destination="Wy2-Qp-dgV" kind="relationship" relationship="viewControllers" id="rDS-Gy-jcQ"/>
                         <segue destination="mUV-Lg-zpN" kind="relationship" relationship="viewControllers" id="r5B-Xs-ftk"/>
-                        <segue destination="CvJ-Cg-M0p" kind="relationship" relationship="viewControllers" id="cR1-mU-Q0H"/>
+                        <segue destination="sbS-lM-NzK" kind="relationship" relationship="viewControllers" id="M9E-4o-nWL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQn-ep-akJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -736,37 +746,291 @@
             </objects>
             <point key="canvasLocation" x="2703" y="824"/>
         </scene>
-        <!--Sky Track-->
-        <scene sceneID="2DQ-NO-kz3">
+        <!--Solar System Facts-->
+        <scene sceneID="GHu-fp-9Kb">
             <objects>
-                <viewController id="CvJ-Cg-M0p" customClass="SkyTrackViewController" customModule="PlanetTrack2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9Ss-MC-sIh" customClass="SolarSystemFactsViewController" customModule="PlanetTrack2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tkq-ZK-wah"/>
-                        <viewControllerLayoutGuide type="bottom" id="tsi-KF-GlP"/>
+                        <viewControllerLayoutGuide type="top" id="iBH-Mi-1cv"/>
+                        <viewControllerLayoutGuide type="bottom" id="pp1-BS-XKy"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lUy-ai-dhq">
+                    <view key="view" contentMode="scaleToFill" id="EgZ-vr-vqS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSz-lJ-HZn">
-                                <rect key="frame" x="248" y="285" width="105" height="30"/>
-                                <state key="normal" title="Start Sky Track"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background4" translatesAutoresizingMaskIntoConstraints="NO" id="sHd-qL-Ciy">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="103" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RmJ-X3-pgz">
+                                <rect key="frame" x="20" y="72" width="560" height="471"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FactCell" rowHeight="103" id="g9z-4g-Wvi" customClass="FactsTableViewCell" customModule="PlanetTrack2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="103"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g9z-4g-Wvi" id="3tH-3R-eHi">
+                                            <rect key="frame" x="0.0" y="0.0" width="527" height="102.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kp-ON-qqn">
+                                                    <rect key="frame" x="91" y="33" width="428" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PUf-he-rQr">
+                                                    <rect key="frame" x="8" y="9" width="85" height="85"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="85" id="s1r-5R-bRa"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PUf-he-rQr" firstAttribute="centerY" secondItem="5kp-ON-qqn" secondAttribute="centerY" id="BaH-NW-Xne"/>
+                                                <constraint firstItem="5kp-ON-qqn" firstAttribute="leading" secondItem="3tH-3R-eHi" secondAttribute="leadingMargin" constant="83" id="ESe-au-g7b"/>
+                                                <constraint firstItem="PUf-he-rQr" firstAttribute="top" secondItem="3tH-3R-eHi" secondAttribute="topMargin" constant="1" id="GQT-Pr-4c1"/>
+                                                <constraint firstItem="5kp-ON-qqn" firstAttribute="trailing" secondItem="3tH-3R-eHi" secondAttribute="trailingMargin" id="Lo0-7F-zm8"/>
+                                                <constraint firstItem="5kp-ON-qqn" firstAttribute="top" secondItem="3tH-3R-eHi" secondAttribute="topMargin" constant="25" id="V0H-bH-Iji"/>
+                                                <constraint firstItem="PUf-he-rQr" firstAttribute="centerY" secondItem="3tH-3R-eHi" secondAttribute="centerY" id="faL-0p-lV6"/>
+                                                <constraint firstItem="PUf-he-rQr" firstAttribute="leading" secondItem="3tH-3R-eHi" secondAttribute="leadingMargin" id="g1J-sb-fIi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellImageView" destination="PUf-he-rQr" id="UIZ-VK-rYA"/>
+                                            <outlet property="cellTitle" destination="5kp-ON-qqn" id="hYc-OS-Js7"/>
+                                            <segue destination="EEd-Yi-A0E" kind="show" identifier="PlanetFactsSegue" id="2Yh-Vb-lB7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <action selector="startAR" destination="CvJ-Cg-M0p" eventType="touchUpInside" id="BC4-4c-FN7"/>
+                                    <outlet property="dataSource" destination="9Ss-MC-sIh" id="9Sw-ym-qhQ"/>
+                                    <outlet property="delegate" destination="9Ss-MC-sIh" id="VfZ-Pb-IyI"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gSz-lJ-HZn" firstAttribute="centerX" secondItem="lUy-ai-dhq" secondAttribute="centerX" id="Ri9-Sq-eVh"/>
-                            <constraint firstItem="gSz-lJ-HZn" firstAttribute="centerY" secondItem="lUy-ai-dhq" secondAttribute="centerY" id="ab6-ge-CAS"/>
+                            <constraint firstItem="pp1-BS-XKy" firstAttribute="top" secondItem="RmJ-X3-pgz" secondAttribute="bottom" constant="8" symbolic="YES" id="6AA-zj-aGP"/>
+                            <constraint firstItem="RmJ-X3-pgz" firstAttribute="top" secondItem="iBH-Mi-1cv" secondAttribute="bottom" constant="8" symbolic="YES" id="Q59-yG-YEu"/>
+                            <constraint firstItem="sHd-qL-Ciy" firstAttribute="top" secondItem="EgZ-vr-vqS" secondAttribute="top" id="QEi-5A-PNm"/>
+                            <constraint firstAttribute="bottom" secondItem="sHd-qL-Ciy" secondAttribute="bottom" id="Vmb-zt-COQ"/>
+                            <constraint firstItem="sHd-qL-Ciy" firstAttribute="leading" secondItem="EgZ-vr-vqS" secondAttribute="leading" id="W5N-co-PPU"/>
+                            <constraint firstItem="RmJ-X3-pgz" firstAttribute="leading" secondItem="EgZ-vr-vqS" secondAttribute="leadingMargin" id="iAf-3N-5Zf"/>
+                            <constraint firstItem="RmJ-X3-pgz" firstAttribute="centerX" secondItem="sHd-qL-Ciy" secondAttribute="centerX" id="oGY-jp-BVi"/>
+                            <constraint firstAttribute="trailing" secondItem="sHd-qL-Ciy" secondAttribute="trailing" id="qdD-vr-8j4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Sky Track" image="tree" id="AaA-w8-Jrd"/>
+                    <navigationItem key="navigationItem" title="Solar System Facts" id="8H2-jU-GgL">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Main Menu" id="Xm4-Ok-kfs">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="Gar-nd-fP5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="factsTableView" destination="RmJ-X3-pgz" id="ytb-b0-wnX"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="acp-mH-EW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7bS-Wv-2Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2703" y="1580"/>
+            <point key="canvasLocation" x="3515" y="1584"/>
+        </scene>
+        <!--Planet Facts View Controller-->
+        <scene sceneID="sym-22-XJo">
+            <objects>
+                <viewController id="EEd-Yi-A0E" customClass="PlanetFactsViewController" customModule="PlanetTrack2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WbH-uF-edj"/>
+                        <viewControllerLayoutGuide type="bottom" id="RN8-eZ-Xoy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iYF-ga-mqX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background3" translatesAutoresizingMaskIntoConstraints="NO" id="Zvu-LA-wEe">
+                                <rect key="frame" x="-5" y="64" width="605" height="487"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planetsMosaic" translatesAutoresizingMaskIntoConstraints="NO" id="HvN-x4-Oct">
+                                <rect key="frame" x="98" y="72" width="405" height="413"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sze-WH-Wh5">
+                                <rect key="frame" x="20" y="72" width="560" height="413"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">The Planets sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="AvenirNextCondensed-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jcu-cA-5ah">
+                                <rect key="frame" x="43" y="493" width="514" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smP-S3-xYF">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Sun"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="1PC-UZ-6dc"/>
+                                            <constraint firstAttribute="height" constant="50" id="X7B-Od-X4M"/>
+                                        </constraints>
+                                        <state key="normal" title="Sun" image="sun"/>
+                                        <connections>
+                                            <action selector="planetSelected:" destination="EEd-Yi-A0E" eventType="touchUpInside" id="vWN-ks-Uav"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFd-cp-ygg">
+                                        <rect key="frame" x="58" y="0.0" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Mercury"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ac2-io-9QR"/>
+                                            <constraint firstAttribute="width" constant="50" id="SOm-ZK-upG"/>
+                                        </constraints>
+                                        <state key="normal" title="Mercury" image="mercury"/>
+                                        <connections>
+                                            <action selector="planetSelected:" destination="EEd-Yi-A0E" eventType="touchUpInside" id="JN4-Rs-F1S"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52l-CY-lxQ">
+                                        <rect key="frame" x="116" y="0.0" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Venus"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="aej-GT-7MM"/>
+                                            <constraint firstAttribute="width" constant="50" id="b5U-vQ-qbe"/>
+                                        </constraints>
+                                        <state key="normal" title="Venus" image="venus"/>
+                                        <connections>
+                                            <action selector="planetSelected:" destination="EEd-Yi-A0E" eventType="touchUpInside" id="cso-Up-zab"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxs-ye-xCw">
+                                        <rect key="frame" x="174" y="0.0" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Earth"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ZsD-xL-n7K"/>
+                                            <constraint firstAttribute="width" constant="50" id="vZR-jA-fgw"/>
+                                        </constraints>
+                                        <state key="normal" title="Earth" image="earth"/>
+                                        <connections>
+                                            <action selector="planetSelected:" destination="EEd-Yi-A0E" eventType="touchUpInside" id="FjG-Sc-tbq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcQ-dZ-giz">
+                                        <rect key="frame" x="232" y="0.0" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Mars"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="ZqY-0d-X0a"/>
+                                            <constraint firstAttribute="height" constant="50" id="zgr-xd-rUe"/>
+                                        </constraints>
+                                        <state key="normal" title="Mars" image="mars"/>
+                                        <connections>
+                                            <action selector="planetSelected:" destination="EEd-Yi-A0E" eventType="touchUpInside" id="W7s-cF-754"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3p-0l-xNg">
+                                        <rect key="frame" x="290" y="0.0" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Jupiter"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ITp-5b-WoS"/>
+                                            <constraint firstAttribute="width" constant="50" id="UcF-S3-BJm"/>
+                                        </constraints>
+                                        <state key="normal" title="Jupiter" image="jupiter"/>
+                                        <connections>
+                                            <action selector="planetSelected:" destination="EEd-Yi-A0E" eventType="touchUpInside" id="Rfz-Cx-lWw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Qr-H2-ddn">
+                                        <rect key="frame" x="348" y="0.0" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Saturn"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="OFw-lI-cU0"/>
+                                            <constraint firstAttribute="height" constant="50" id="pUT-ZD-lpb"/>
+                                        </constraints>
+                                        <state key="normal" title="Saturn" image="saturn"/>
+                                        <connections>
+                                            <action selector="planetSelected:" destination="EEd-Yi-A0E" eventType="touchUpInside" id="dzM-7D-kyR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ce-aj-j4r">
+                                        <rect key="frame" x="406" y="0.0" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Uranus"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="WK9-gK-Twt"/>
+                                            <constraint firstAttribute="width" constant="50" id="z33-7a-a8c"/>
+                                        </constraints>
+                                        <state key="normal" title="Uranus" image="uranus"/>
+                                        <connections>
+                                            <action selector="planetSelected:" destination="EEd-Yi-A0E" eventType="touchUpInside" id="WPc-cE-tqm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3m-Uw-Gys">
+                                        <rect key="frame" x="464" y="0.0" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Neptune"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="D00-g6-TwR"/>
+                                            <constraint firstAttribute="width" constant="50" id="xqR-7a-Ncw"/>
+                                        </constraints>
+                                        <state key="normal" title="Neptune" image="neptune"/>
+                                        <connections>
+                                            <action selector="planetSelected:" destination="EEd-Yi-A0E" eventType="touchUpInside" id="Ldj-Tu-Lzx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RN8-eZ-Xoy" firstAttribute="top" secondItem="Jcu-cA-5ah" secondAttribute="bottom" constant="8" id="2Zy-ia-hB4"/>
+                            <constraint firstItem="Zvu-LA-wEe" firstAttribute="leading" secondItem="iYF-ga-mqX" secondAttribute="leadingMargin" constant="-25" id="8q2-Ar-27X"/>
+                            <constraint firstItem="HvN-x4-Oct" firstAttribute="leading" secondItem="Sze-WH-Wh5" secondAttribute="leading" constant="78" id="CoR-P0-Uda"/>
+                            <constraint firstItem="Zvu-LA-wEe" firstAttribute="top" secondItem="WbH-uF-edj" secondAttribute="bottom" id="DrJ-HY-Tjw"/>
+                            <constraint firstItem="Sze-WH-Wh5" firstAttribute="centerX" secondItem="Jcu-cA-5ah" secondAttribute="centerX" id="HEJ-Y8-G2E"/>
+                            <constraint firstAttribute="trailing" secondItem="Zvu-LA-wEe" secondAttribute="trailing" id="Ilx-Z3-Y90"/>
+                            <constraint firstItem="HvN-x4-Oct" firstAttribute="top" secondItem="Sze-WH-Wh5" secondAttribute="top" id="KLk-Yd-F72"/>
+                            <constraint firstItem="Sze-WH-Wh5" firstAttribute="leading" secondItem="iYF-ga-mqX" secondAttribute="leadingMargin" id="L9k-Df-gI4"/>
+                            <constraint firstItem="Zvu-LA-wEe" firstAttribute="bottom" secondItem="RN8-eZ-Xoy" secondAttribute="top" id="Nse-hY-Ntr"/>
+                            <constraint firstItem="RN8-eZ-Xoy" firstAttribute="top" secondItem="Jcu-cA-5ah" secondAttribute="bottom" constant="8" symbolic="YES" id="O1s-dT-oVu"/>
+                            <constraint firstItem="Sze-WH-Wh5" firstAttribute="centerX" secondItem="iYF-ga-mqX" secondAttribute="centerX" id="YzH-Xg-oBg"/>
+                            <constraint firstItem="HvN-x4-Oct" firstAttribute="trailing" secondItem="Sze-WH-Wh5" secondAttribute="trailing" constant="-77" id="bU6-sO-Ljo"/>
+                            <constraint firstItem="HvN-x4-Oct" firstAttribute="centerX" secondItem="iYF-ga-mqX" secondAttribute="centerX" id="d1U-PV-LXG"/>
+                            <constraint firstItem="Sze-WH-Wh5" firstAttribute="top" secondItem="WbH-uF-edj" secondAttribute="bottom" constant="8" symbolic="YES" id="l6C-Ul-u8Q"/>
+                            <constraint firstItem="Jcu-cA-5ah" firstAttribute="top" secondItem="Sze-WH-Wh5" secondAttribute="bottom" constant="8" symbolic="YES" id="oLa-6G-GVK"/>
+                            <constraint firstItem="Jcu-cA-5ah" firstAttribute="top" secondItem="HvN-x4-Oct" secondAttribute="bottom" constant="8" symbolic="YES" id="yIR-BL-nfb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="behindTextImage" destination="HvN-x4-Oct" id="iYW-vz-crx"/>
+                        <outlet property="planetFactsTextView" destination="Sze-WH-Wh5" id="NYm-Ge-21A"/>
+                        <outlet property="planetsStackView" destination="Jcu-cA-5ah" id="Dqw-nd-n1c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sZv-EE-bkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4212" y="1584"/>
+        </scene>
+        <!--Solar System Facts-->
+        <scene sceneID="hbs-Yx-C2K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sbS-lM-NzK" customClass="SolarSystemFactsNavigationController" customModule="PlanetTrack2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Solar System Facts" image="spiral" id="7lr-FW-MSC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iMd-xS-xJq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9Ss-MC-sIh" kind="relationship" relationship="rootViewController" id="ZdR-Jb-ciB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NK7-nI-Tfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="1584"/>
         </scene>
     </scenes>
     <resources>
@@ -781,15 +1045,17 @@
         <image name="mercury" width="670" height="670"/>
         <image name="neptune" width="594" height="594"/>
         <image name="photo-7" width="30" height="30"/>
+        <image name="planetsMosaic" width="350" height="350"/>
         <image name="question" width="30" height="30"/>
         <image name="saturn" width="648" height="544"/>
+        <image name="spiral" width="30" height="30"/>
         <image name="sun" width="480" height="485"/>
         <image name="target" width="30" height="30"/>
-        <image name="tree" width="30" height="30"/>
         <image name="uranus" width="1280" height="1258"/>
         <image name="venus" width="313" height="313"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ySf-Nj-gr3"/>
+        <segue reference="Wjl-X1-jZV"/>
+        <segue reference="Gar-nd-fP5"/>
     </inferredMetricsTieBreakers>
 </document>

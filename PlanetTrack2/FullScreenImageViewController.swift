@@ -25,6 +25,7 @@ class FullScreenImageViewController: UIViewController, UIScrollViewDelegate {
         self.imageScrollView.delegate = self
     
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

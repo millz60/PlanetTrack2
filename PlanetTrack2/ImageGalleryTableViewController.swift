@@ -22,6 +22,9 @@ class ImageGalleryTableViewController: UIViewController, UITableViewDelegate {
     var saturnImages: NSMutableDictionary!
     var uranusImages: NSMutableDictionary!
     var neptuneImages: NSMutableDictionary!
+    var universeImages: NSMutableDictionary!
+    var cometImages: NSMutableDictionary!
+
     
     var selectedCell: String!
     var allCells: [NSMutableDictionary]!
@@ -39,7 +42,7 @@ class ImageGalleryTableViewController: UIViewController, UITableViewDelegate {
         downloadImageData()
         
         self.ImageTableView.backgroundColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.25)
-        self.factsArray = ["sun","mercury","venus","earth","moon","mars","jupiter","saturn","uranus","neptune"]
+        self.factsArray = ["sun","mercury","venus","earth","moon","mars","jupiter","saturn","uranus","neptune","universe","comets"]
         self.ImageTableView.userInteractionEnabled = false
         self.title = "Image Gallery"
         
@@ -74,6 +77,8 @@ class ImageGalleryTableViewController: UIViewController, UITableViewDelegate {
             let saturnImageData = NSMutableDictionary(dictionary: imageData["Saturn"]! as! [String : String])
             let uranusImageData = NSMutableDictionary(dictionary: imageData["Uranus"]! as! [String : String])
             let neptuneImageData = NSMutableDictionary(dictionary: imageData["Neptune"]! as! [String : String])
+            let universeImageData = NSMutableDictionary(dictionary: imageData["Universe"]! as! [String : String])
+            let cometImageData = NSMutableDictionary(dictionary: imageData["Comets"]! as! [String : String])
 
             self.sunImages = sunImageData
             self.mercuryImages = mercuryImageData
@@ -85,8 +90,10 @@ class ImageGalleryTableViewController: UIViewController, UITableViewDelegate {
             self.saturnImages = saturnImageData
             self.uranusImages = uranusImageData
             self.neptuneImages = neptuneImageData
+            self.universeImages = universeImageData
+            self.cometImages = cometImageData
             
-            self.allCells = [self.sunImages,self.mercuryImages,self.venusImages,self.earthImages,self.moonImages,self.marsImages,self.jupiterImages,self.saturnImages,self.uranusImages,self.neptuneImages]
+            self.allCells = [self.sunImages,self.mercuryImages,self.venusImages,self.earthImages,self.moonImages,self.marsImages,self.jupiterImages,self.saturnImages,self.uranusImages,self.neptuneImages, self.universeImages, self.cometImages]
             
             
             dispatch_async(dispatch_get_main_queue(), {
@@ -130,6 +137,10 @@ class ImageGalleryTableViewController: UIViewController, UITableViewDelegate {
         cell.imageView?.image = UIImage(named: factsArray[indexPath.row])
         cell.backgroundColor = UIColor.clearColor()
         cell.backgroundView?.tintColor = UIColor.redColor()
+        
+        if(cell.textLabel!.text! == "Comets"){
+            cell.textLabel!.text = "Comets and Asteroids"
+        }
         
 
         

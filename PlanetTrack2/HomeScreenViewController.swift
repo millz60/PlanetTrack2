@@ -22,20 +22,31 @@ class HomeScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        planetImageView = UIImageView(frame: CGRect(x: (self.view.frame.size.width/3), y: (self.view.frame.size.height/2), width: 0, height: 0))
+        planetImageView = UIImageView()
+        
         planetImageView.image = UIImage(named: "earth")
         planetImageView.layer.zPosition = 9998
         planetImageView.alpha = 1
         
         self.view.addSubview(planetImageView)
         
-        targetView = UIImageView(frame: CGRect(x: (self.view.frame.size.width/3)-140, y: (self.view.frame.size.height/2)-140, width: 280, height: 280))
+        targetView = UIImageView()
         targetView.image = UIImage(named: "crosshairs2.png")
         targetView.backgroundColor = UIColor.clearColor()
         targetView.layer.zPosition = 9999
         targetView.layer.borderWidth = 1.0
         targetView.layer.borderColor = UIColor(red: 0.0/255.0, green: 255.0/255.0, blue: 0.0/255.0, alpha: 0.75).CGColor
         targetView.alpha = 0.0
+        
+
+        if UIScreen.mainScreen().bounds.size.height == 320 {
+            // IPhone 5 and 4
+            targetView.frame = CGRect(x: (self.view.frame.size.width/4)-90, y: (self.view.frame.size.height/2)-90, width: 180, height: 180)
+            planetImageView.frame = CGRect(x: (self.view.frame.size.width/4), y: (self.view.frame.size.height/2), width: 0, height: 0)
+        } else{
+            targetView.frame = CGRect(x: (self.view.frame.size.width/3)-140, y: (self.view.frame.size.height/2)-140, width: 280, height: 280)
+            planetImageView.frame = CGRect(x: (self.view.frame.size.width/3), y: (self.view.frame.size.height/2), width: 0, height: 0)
+        }
         
         
         self.view.addSubview(targetView)
@@ -54,10 +65,36 @@ class HomeScreenViewController: UIViewController {
         
     }
     
+    
     func flash() {
         
         
         let randInt = Int(arc4random_uniform(7))
+        
+        if UIScreen.mainScreen().bounds.size.height == 320 {
+            // IPhone 5 and 4
+            UIView.animateWithDuration(3.5, animations: {
+                self.planetImageView.frame = CGRect(x: (self.view.frame.size.width/4), y: (self.view.frame.size.height/2), width: 0, height: 0)
+                self.planetImageView.alpha = 0.3
+                
+                
+            }) { (g) in
+                UIView.animateWithDuration(3.5, animations: {
+                    self.planetImageView.image = UIImage(named: self.planetsArray[randInt])
+                    self.planetImageView.alpha = 1.0
+                    self.planetImageView.frame = CGRect(x: (self.view.frame.size.width/4)-50, y: (self.view.frame.size.height/2)-50, width: 100, height: 100)
+                    
+                }) { (h) in
+                    UIView.animateWithDuration(0.25, animations: {
+                    }) { (x) in
+                    }
+                    
+                    
+                }}
+            
+            
+
+        } else {
         
         UIView.animateWithDuration(3.5, animations: {
             self.planetImageView.frame = CGRect(x: (self.view.frame.size.width/3), y: (self.view.frame.size.height/2), width: 0, height: 0)
@@ -77,6 +114,7 @@ class HomeScreenViewController: UIViewController {
                 
 
         }}
+        }
     }
     
     func flash2() {
@@ -110,15 +148,35 @@ class HomeScreenViewController: UIViewController {
     
     func animatePlanet() {
         
-        UIView.animateWithDuration(3.5, animations: {
-            self.planetImageView.alpha = 1.0
-            self.planetImageView.frame = CGRect(x:(self.view.frame.size.width/3)-100, y:(self.view.frame.size.height/2)-100, width:200, height: 200)
+        if UIScreen.mainScreen().bounds.size.height == 320 {
+            // IPhone 5 and 4
+            targetView.frame = CGRect(x: (self.view.frame.size.width/4)-90, y: (self.view.frame.size.height/2)-90, width: 180, height: 180)
+            planetImageView.frame = CGRect(x: (self.view.frame.size.width/4), y: (self.view.frame.size.height/2), width: 0, height: 0)
+            
+            UIView.animateWithDuration(3.5, animations: {
+                self.planetImageView.alpha = 1.0
+                self.planetImageView.frame = CGRect(x:(self.view.frame.size.width/4)-50, y:(self.view.frame.size.height/2)-50, width:100, height: 100)
+                
+                }, completion: nil)
+            
+            
+        } else{
+            targetView.frame = CGRect(x: (self.view.frame.size.width/3)-140, y: (self.view.frame.size.height/2)-140, width: 280, height: 280)
+            planetImageView.frame = CGRect(x: (self.view.frame.size.width/3), y: (self.view.frame.size.height/2), width: 0, height: 0)
+            
+            UIView.animateWithDuration(3.5, animations: {
+                self.planetImageView.alpha = 1.0
+                self.planetImageView.frame = CGRect(x:(self.view.frame.size.width/3)-100, y:(self.view.frame.size.height/2)-100, width:200, height: 200)
+                
+                }, completion: nil)
+        }
+        
 
-            }, completion: nil)
         
         
         
     }
+
     
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -131,7 +189,7 @@ class HomeScreenViewController: UIViewController {
             
         } else if (segue.identifier == "SolarSystemFactsSegue"){
             
-//            destination.selectedIndex = 1
+            destination.selectedIndex = 2
         
         } else if (segue.identifier == "ImageGallerySegue"){
         

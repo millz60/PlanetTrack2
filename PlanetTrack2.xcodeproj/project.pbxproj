@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9269C71C92C719361FABE28D /* Pods_PlanetTrack2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E343B31D3B04B0F1D10BDBF3 /* Pods_PlanetTrack2.framework */; };
+		C950F56E1D6F6182008D3F43 /* SolarSystemFactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950F56D1D6F6182008D3F43 /* SolarSystemFactsNavigationController.swift */; };
+		C950F5701D6F61CF008D3F43 /* SolarSystemFactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950F56F1D6F61CF008D3F43 /* SolarSystemFactsViewController.swift */; };
+		C950F5721D6F7142008D3F43 /* FactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950F5711D6F7142008D3F43 /* FactsTableViewCell.swift */; };
+		C950F5781D6FB66A008D3F43 /* PlanetFactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950F5771D6FB66A008D3F43 /* PlanetFactsViewController.swift */; };
 		C965C6461D6B7A8700896813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C6451D6B7A8700896813 /* AppDelegate.swift */; };
-		C965C6481D6B7A8700896813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C6471D6B7A8700896813 /* ViewController.swift */; };
 		C965C64B1D6B7A8700896813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C965C6491D6B7A8700896813 /* Main.storyboard */; };
 		C965C6501D6B7A8700896813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C965C64E1D6B7A8700896813 /* LaunchScreen.storyboard */; };
 		C965C6581D6B7B3100896813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C965C6571D6B7B3100896813 /* Assets.xcassets */; };
-		C965C65A1D6B7BAF00896813 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C6591D6B7BAF00896813 /* CustomViewController.swift */; };
 		C965C65F1D6B7BBF00896813 /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C65B1D6B7BBF00896813 /* FullScreenImageViewController.swift */; };
 		C965C6601D6B7BBF00896813 /* HomeScreenTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C65C1D6B7BBF00896813 /* HomeScreenTabBarController.swift */; };
 		C965C6611D6B7BBF00896813 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965C65D1D6B7BBF00896813 /* HomeScreenViewController.swift */; };
@@ -27,14 +30,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5DB19682612ED6B25CE4CE73 /* Pods-PlanetTrack2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanetTrack2.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlanetTrack2/Pods-PlanetTrack2.release.xcconfig"; sourceTree = "<group>"; };
+		C950F56D1D6F6182008D3F43 /* SolarSystemFactsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolarSystemFactsNavigationController.swift; sourceTree = "<group>"; };
+		C950F56F1D6F61CF008D3F43 /* SolarSystemFactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolarSystemFactsViewController.swift; sourceTree = "<group>"; };
+		C950F5711D6F7142008D3F43 /* FactsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsTableViewCell.swift; sourceTree = "<group>"; };
+		C950F5771D6FB66A008D3F43 /* PlanetFactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetFactsViewController.swift; sourceTree = "<group>"; };
 		C965C6421D6B7A8700896813 /* PlanetTrack2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetTrack2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C965C6451D6B7A8700896813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C965C6471D6B7A8700896813 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C965C64A1D6B7A8700896813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C965C64F1D6B7A8700896813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C965C6511D6B7A8700896813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C965C6571D6B7B3100896813 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C965C6591D6B7BAF00896813 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		C965C65B1D6B7BBF00896813 /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 		C965C65C1D6B7BBF00896813 /* HomeScreenTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenTabBarController.swift; sourceTree = "<group>"; };
 		C965C65D1D6B7BBF00896813 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +52,8 @@
 		C965C6671D6B7BDC00896813 /* PlanetTrackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetTrackViewController.swift; sourceTree = "<group>"; };
 		C965C66D1D6CAB5B00896813 /* SkyTrackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyTrackViewController.swift; sourceTree = "<group>"; };
 		C965C66F1D6CB24F00896813 /* RelativeDistancesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelativeDistancesViewController.swift; sourceTree = "<group>"; };
+		E343B31D3B04B0F1D10BDBF3 /* Pods_PlanetTrack2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlanetTrack2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F437F8C1903BBA28648FB0B4 /* Pods-PlanetTrack2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanetTrack2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlanetTrack2/Pods-PlanetTrack2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +61,78 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9269C71C92C719361FABE28D /* Pods_PlanetTrack2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74AE42FE2F2506D560B337CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E343B31D3B04B0F1D10BDBF3 /* Pods_PlanetTrack2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A35E420A9824A33610AF140C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F437F8C1903BBA28648FB0B4 /* Pods-PlanetTrack2.debug.xcconfig */,
+				5DB19682612ED6B25CE4CE73 /* Pods-PlanetTrack2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C950F5731D6FB393008D3F43 /* PlanetTrack */ = {
+			isa = PBXGroup;
+			children = (
+				C965C6651D6B7BDC00896813 /* PlanetTrackHelpViewController.swift */,
+				C965C6661D6B7BDC00896813 /* PlanetTrackNavigationController.swift */,
+				C965C6671D6B7BDC00896813 /* PlanetTrackViewController.swift */,
+			);
+			name = PlanetTrack;
+			sourceTree = "<group>";
+		};
+		C950F5741D6FB3B1008D3F43 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C965C65C1D6B7BBF00896813 /* HomeScreenTabBarController.swift */,
+				C965C65D1D6B7BBF00896813 /* HomeScreenViewController.swift */,
+			);
+			name = "Home Screen";
+			sourceTree = "<group>";
+		};
+		C950F5751D6FB3C3008D3F43 /* Image Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				C965C65B1D6B7BBF00896813 /* FullScreenImageViewController.swift */,
+				C965C65E1D6B7BBF00896813 /* ImageGalleryNavigationControllerViewController.swift */,
+				C965C6631D6B7BDC00896813 /* ImageGalleryTableViewController.swift */,
+				C965C6641D6B7BDC00896813 /* ImageGalleryTestViewController.swift */,
+			);
+			name = "Image Gallery";
+			sourceTree = "<group>";
+		};
+		C950F5761D6FB3EF008D3F43 /* Solar System Facts */ = {
+			isa = PBXGroup;
+			children = (
+				C950F5711D6F7142008D3F43 /* FactsTableViewCell.swift */,
+				C950F56D1D6F6182008D3F43 /* SolarSystemFactsNavigationController.swift */,
+				C950F56F1D6F61CF008D3F43 /* SolarSystemFactsViewController.swift */,
+				C950F5771D6FB66A008D3F43 /* PlanetFactsViewController.swift */,
+			);
+			name = "Solar System Facts";
+			sourceTree = "<group>";
+		};
 		C965C6391D6B7A8700896813 = {
 			isa = PBXGroup;
 			children = (
 				C965C6441D6B7A8700896813 /* PlanetTrack2 */,
 				C965C6431D6B7A8700896813 /* Products */,
+				A35E420A9824A33610AF140C /* Pods */,
+				74AE42FE2F2506D560B337CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,34 +147,19 @@
 		C965C6441D6B7A8700896813 /* PlanetTrack2 */ = {
 			isa = PBXGroup;
 			children = (
-				C9BE9E3A1D6DF22300852F02 /* Third Party Libs */,
+				C950F5761D6FB3EF008D3F43 /* Solar System Facts */,
+				C950F5751D6FB3C3008D3F43 /* Image Gallery */,
+				C950F5741D6FB3B1008D3F43 /* Home Screen */,
+				C950F5731D6FB393008D3F43 /* PlanetTrack */,
 				C965C6451D6B7A8700896813 /* AppDelegate.swift */,
-				C965C6471D6B7A8700896813 /* ViewController.swift */,
-				C965C6591D6B7BAF00896813 /* CustomViewController.swift */,
 				C965C6491D6B7A8700896813 /* Main.storyboard */,
 				C965C64E1D6B7A8700896813 /* LaunchScreen.storyboard */,
 				C965C6571D6B7B3100896813 /* Assets.xcassets */,
-				C965C65B1D6B7BBF00896813 /* FullScreenImageViewController.swift */,
-				C965C65C1D6B7BBF00896813 /* HomeScreenTabBarController.swift */,
-				C965C65D1D6B7BBF00896813 /* HomeScreenViewController.swift */,
-				C965C65E1D6B7BBF00896813 /* ImageGalleryNavigationControllerViewController.swift */,
 				C965C6511D6B7A8700896813 /* Info.plist */,
-				C965C6631D6B7BDC00896813 /* ImageGalleryTableViewController.swift */,
-				C965C6641D6B7BDC00896813 /* ImageGalleryTestViewController.swift */,
-				C965C6651D6B7BDC00896813 /* PlanetTrackHelpViewController.swift */,
-				C965C6661D6B7BDC00896813 /* PlanetTrackNavigationController.swift */,
-				C965C6671D6B7BDC00896813 /* PlanetTrackViewController.swift */,
 				C965C66D1D6CAB5B00896813 /* SkyTrackViewController.swift */,
 				C965C66F1D6CB24F00896813 /* RelativeDistancesViewController.swift */,
 			);
 			path = PlanetTrack2;
-			sourceTree = "<group>";
-		};
-		C9BE9E3A1D6DF22300852F02 /* Third Party Libs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Third Party Libs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,9 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C965C6541D6B7A8700896813 /* Build configuration list for PBXNativeTarget "PlanetTrack2" */;
 			buildPhases = (
+				9387DA54B992FBAD964C0DC6 /* 📦 Check Pods Manifest.lock */,
 				C965C63E1D6B7A8700896813 /* Sources */,
 				C965C63F1D6B7A8700896813 /* Frameworks */,
 				C965C6401D6B7A8700896813 /* Resources */,
+				2D899587DA9184676417D896 /* 📦 Embed Pods Frameworks */,
+				4034B592E14B70FEDA884D48 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,6 +197,7 @@
 				TargetAttributes = {
 					C965C6411D6B7A8700896813 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = LM6Y4TJMJG;
 					};
 				};
 			};
@@ -174,15 +232,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D899587DA9184676417D896 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlanetTrack2/Pods-PlanetTrack2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4034B592E14B70FEDA884D48 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlanetTrack2/Pods-PlanetTrack2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9387DA54B992FBAD964C0DC6 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C965C63E1D6B7A8700896813 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C965C65A1D6B7BAF00896813 /* CustomViewController.swift in Sources */,
+				C950F56E1D6F6182008D3F43 /* SolarSystemFactsNavigationController.swift in Sources */,
 				C965C66B1D6B7BDC00896813 /* PlanetTrackNavigationController.swift in Sources */,
 				C965C6691D6B7BDC00896813 /* ImageGalleryTestViewController.swift in Sources */,
-				C965C6481D6B7A8700896813 /* ViewController.swift in Sources */,
 				C965C6681D6B7BDC00896813 /* ImageGalleryTableViewController.swift in Sources */,
 				C965C66E1D6CAB5B00896813 /* SkyTrackViewController.swift in Sources */,
 				C965C6601D6B7BBF00896813 /* HomeScreenTabBarController.swift in Sources */,
@@ -192,7 +297,10 @@
 				C965C66A1D6B7BDC00896813 /* PlanetTrackHelpViewController.swift in Sources */,
 				C965C6621D6B7BBF00896813 /* ImageGalleryNavigationControllerViewController.swift in Sources */,
 				C965C6611D6B7BBF00896813 /* HomeScreenViewController.swift in Sources */,
+				C950F5721D6F7142008D3F43 /* FactsTableViewCell.swift in Sources */,
 				C965C6701D6CB24F00896813 /* RelativeDistancesViewController.swift in Sources */,
+				C950F5781D6FB66A008D3F43 /* PlanetFactsViewController.swift in Sources */,
+				C950F5701D6F61CF008D3F43 /* SolarSystemFactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,28 +413,34 @@
 		};
 		C965C6551D6B7A8700896813 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F437F8C1903BBA28648FB0B4 /* Pods-PlanetTrack2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PlanetTrack2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theironyard.houston.PlanetTrack2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		C965C6561D6B7A8700896813 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DB19682612ED6B25CE4CE73 /* Pods-PlanetTrack2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PlanetTrack2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theironyard.houston.PlanetTrack2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

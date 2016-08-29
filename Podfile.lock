@@ -1,0 +1,12 @@
+PODS:
+  - PRAugmentedReality (3.1.0)
+
+DEPENDENCIES:
+  - PRAugmentedReality
+
+SPEC CHECKSUMS:
+  PRAugmentedReality: a9bb0e0cf4ea2ab95f29696dfba0516c10ea0148
+
+PODFILE CHECKSUM: 30e0ed3b075adf4ebe7d96d79a32a33984aeadab
+
+COCOAPODS: 1.0.0
