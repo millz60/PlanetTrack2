@@ -197,7 +197,7 @@ class HomeScreenViewController: UIViewController {
     
         } else if (segue.identifier == "AboutSegue"){
             
-//            destination.selectedIndex = 3
+            destination.selectedIndex = 3
         }
         
     }

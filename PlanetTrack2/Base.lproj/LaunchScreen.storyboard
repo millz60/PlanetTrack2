@@ -16,12 +16,52 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingScreenIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pgP-wb-hZR">
+                                <rect key="frame" x="180" y="75" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="DA0-6u-Fg9"/>
+                                    <constraint firstAttribute="width" constant="240" id="mcp-Vn-lMo"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlanetTrack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGr-FR-XpP">
+                                <rect key="frame" x="186" y="280" width="228" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="228" id="sOs-SU-e9R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDs-Db-5Ch">
+                                <rect key="frame" x="186" y="535" width="228" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="ThJ-BD-vPO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.01176470588" green="0.34509803919999998" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZGr-FR-XpP" firstAttribute="trailing" secondItem="hDs-Db-5Ch" secondAttribute="trailing" id="7fR-AW-QaH"/>
+                            <constraint firstItem="pgP-wb-hZR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="B2S-hL-ezu"/>
+                            <constraint firstItem="ZGr-FR-XpP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="E8S-9Q-W86"/>
+                            <constraint firstItem="ZGr-FR-XpP" firstAttribute="leading" secondItem="hDs-Db-5Ch" secondAttribute="leading" id="bKg-gC-Wuv"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="hDs-Db-5Ch" secondAttribute="bottom" constant="26" id="dxr-iu-odB"/>
+                            <constraint firstItem="pgP-wb-hZR" firstAttribute="centerX" secondItem="ZGr-FR-XpP" secondAttribute="centerX" id="ifa-2b-uGj"/>
+                            <constraint firstItem="ZGr-FR-XpP" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="260" id="sJu-zV-Vcb"/>
+                            <constraint firstItem="pgP-wb-hZR" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="55" id="u2a-lt-yqE"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="351" y="383"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="loadingScreenIcon" width="347" height="347"/>
+    </resources>
 </document>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9269C71C92C719361FABE28D /* Pods_PlanetTrack2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E343B31D3B04B0F1D10BDBF3 /* Pods_PlanetTrack2.framework */; };
+		C927D8491D7628540037ACF8 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C927D8481D7628530037ACF8 /* WebViewController.swift */; };
 		C950F56E1D6F6182008D3F43 /* SolarSystemFactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950F56D1D6F6182008D3F43 /* SolarSystemFactsNavigationController.swift */; };
 		C950F5701D6F61CF008D3F43 /* SolarSystemFactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950F56F1D6F61CF008D3F43 /* SolarSystemFactsViewController.swift */; };
 		C950F5721D6F7142008D3F43 /* FactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950F5711D6F7142008D3F43 /* FactsTableViewCell.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		5DB19682612ED6B25CE4CE73 /* Pods-PlanetTrack2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanetTrack2.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlanetTrack2/Pods-PlanetTrack2.release.xcconfig"; sourceTree = "<group>"; };
+		C927D8481D7628530037ACF8 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		C950F56D1D6F6182008D3F43 /* SolarSystemFactsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolarSystemFactsNavigationController.swift; sourceTree = "<group>"; };
 		C950F56F1D6F61CF008D3F43 /* SolarSystemFactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolarSystemFactsViewController.swift; sourceTree = "<group>"; };
 		C950F5711D6F7142008D3F43 /* FactsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsTableViewCell.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				C965C6511D6B7A8700896813 /* Info.plist */,
 				C965C66D1D6CAB5B00896813 /* SkyTrackViewController.swift */,
 				C965C66F1D6CB24F00896813 /* RelativeDistancesViewController.swift */,
+				C927D8481D7628530037ACF8 /* WebViewController.swift */,
 			);
 			path = PlanetTrack2;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				C965C66A1D6B7BDC00896813 /* PlanetTrackHelpViewController.swift in Sources */,
 				C965C6621D6B7BBF00896813 /* ImageGalleryNavigationControllerViewController.swift in Sources */,
 				C965C6611D6B7BBF00896813 /* HomeScreenViewController.swift in Sources */,
+				C927D8491D7628540037ACF8 /* WebViewController.swift in Sources */,
 				C950F5721D6F7142008D3F43 /* FactsTableViewCell.swift in Sources */,
 				C965C6701D6CB24F00896813 /* RelativeDistancesViewController.swift in Sources */,
 				C950F5781D6FB66A008D3F43 /* PlanetFactsViewController.swift in Sources */,
