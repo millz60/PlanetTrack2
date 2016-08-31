@@ -76,6 +76,18 @@ class PlanetTrackHelpViewController: UIViewController {
         fingerpointView.layer.zPosition = 9999
         fingerpointView.image = handImage
         
+        if UIScreen.mainScreen().bounds.size.height == 320{
+            
+            tutorialOverlay.frame = CGRect(x: 25, y: (self.view.frame.size.height/2)-90, width: 225, height: 130)
+            tutorialText1.frame = CGRect(x: self.tutorialView.frame.size.width - 325, y: 50, width: 350, height: 35)
+            tutorialText2.frame = CGRect(x: self.tutorialView.frame.size.width - 325, y: 85, width: 350, height: 35)
+            tutorialText3.frame = CGRect(x: self.tutorialView.frame.size.width - 325, y: 120, width: 350, height: 35)
+            tutorialText4.frame = CGRect(x: self.tutorialView.frame.size.width - 325, y: 155, width: 350, height: 35)
+            tutorialText5.frame = CGRect(x: self.tutorialView.frame.size.width - 325, y: 190, width: 350, height: 35)
+            
+            
+        }
+        
         
         
         self.tutorialView.addSubview(fingerpointView)
@@ -90,15 +102,24 @@ class PlanetTrackHelpViewController: UIViewController {
         UIView.animateWithDuration(2.5, animations: {
             
             tutorialText1.alpha = 1.0
-            fingerpointView.frame = CGRect(x: 50, y: 125, width: 60, height: 60)
+            if UIScreen.mainScreen().bounds.size.height == 320{
+                fingerpointView.frame = CGRect(x: 20, y: 125, width: 60, height: 60)
+                
+            } else {
+                fingerpointView.frame = CGRect(x: 50, y: 125, width: 60, height: 60)
+            }
 
             }) { (x) in
                 
                 UIView.animateWithDuration(2.5, animations: {
                     
                     tutorialText2.alpha = 1.0
-                    fingerpointView.frame = CGRect(x: 168, y: 193, width: 60, height: 60)
-                    
+                    if UIScreen.mainScreen().bounds.size.height == 320{
+                        fingerpointView.frame = CGRect(x: 113, y: 173, width: 60, height: 60)
+                        
+                    } else {
+                        fingerpointView.frame = CGRect(x: 168, y: 193, width: 60, height: 60)
+                    }
                     
                     }, completion: { (y) in
                         
@@ -107,14 +128,22 @@ class PlanetTrackHelpViewController: UIViewController {
                         UIView.animateWithDuration(2.5, animations: {
                             
                             tutorialText3.alpha = 1.0
-                            fingerpointView.frame = CGRect(x: 270, y: 125, width: 60, height: 60)
+                            if UIScreen.mainScreen().bounds.size.height == 320{
+                                fingerpointView.frame = CGRect(x: 200, y: 125, width: 60, height: 60)
+                            } else {
+                                fingerpointView.frame = CGRect(x: 270, y: 125, width: 60, height: 60)
+                            }
                             
                             }, completion: { (z) in
                                 
                                 UIView.animateWithDuration(2.5, animations: {
                                     
                                     tutorialText4.alpha = 1.0
-                                    fingerpointView.frame = CGRect(x: 233, y: 193, width: 60, height: 60)
+                                     if UIScreen.mainScreen().bounds.size.height == 320{
+                                        fingerpointView.frame = CGRect(x: 163, y: 173, width: 60, height: 60)
+                                     } else {
+                                        fingerpointView.frame = CGRect(x: 233, y: 193, width: 60, height: 60)
+                                    }
                                     
                                     
                                     }, completion: { (a) in
@@ -123,7 +152,11 @@ class PlanetTrackHelpViewController: UIViewController {
                                         UIView.animateWithDuration(2.5, animations: {
                                             
                                             tutorialText5.alpha = 1.0
-                                            fingerpointView.frame = CGRect(x: 160, y: 145, width: 60, height: 60)
+                                            if UIScreen.mainScreen().bounds.size.height == 320{
+                                                fingerpointView.frame = CGRect(x: 125, y: 143, width: 60, height: 60)
+                                            } else{
+                                                fingerpointView.frame = CGRect(x: 160, y: 145, width: 60, height: 60)
+                                            }
                                             
                                             }, completion: { (b) in
                                              
@@ -131,6 +164,7 @@ class PlanetTrackHelpViewController: UIViewController {
                                                 
                                                 UIView.animateWithDuration(2.5, animations: {
                                                     fingerpointView.frame = CGRect(x: 150, y: 225, width: 60, height: 60)
+                                                    fingerpointView.alpha = 0.0
                                                 })
                                         })
                                 })

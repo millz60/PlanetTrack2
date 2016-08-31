@@ -39,7 +39,14 @@ class ImageGalleryTableViewController: UIViewController, UITableViewDelegate {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        downloadImageData()
+        if(isInternetAvailable()){
+            downloadImageData()
+        } else {
+                let alert = UIAlertController(title: "Alert", message: "Image Gallery Requires an Internet Connection.", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            self.ImageTableView.userInteractionEnabled = true
+        }
         
         self.ImageTableView.backgroundColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.25)
         self.factsArray = ["sun","mercury","venus","earth","moon","mars","jupiter","saturn","uranus","neptune","universe","comets"]
@@ -48,6 +55,18 @@ class ImageGalleryTableViewController: UIViewController, UITableViewDelegate {
         
 
         self.ImageTableView.reloadData()
+        
+    }
+    
+    func isInternetAvailable() -> Bool {
+        let networkReachability : Reachability = Reachability.reachabilityForInternetConnection()
+        let networkStatus : NetworkStatus = networkReachability.currentReachabilityStatus()
+        
+        if networkStatus == NotReachable {
+            return false
+        } else {
+            return true
+        }
         
     }
     

@@ -14,6 +14,12 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var buttonsTableView: UITableView!
     @IBOutlet weak var menuStackView: UIStackView!
     @IBOutlet weak var planetTrackLabel: UILabel!
+    @IBOutlet weak var planetTrackButton: UIButton!
+    @IBOutlet weak var solarSystemFactsButton: UIButton!
+    @IBOutlet weak var imageGalleryButton: UIButton!
+    
+    
+    
     let planetsArray = ["mars","jupiter","saturn","earth","neptune","venus","mercury","uranus"]
     
     var planetImageView: UIImageView!
@@ -21,6 +27,18 @@ class HomeScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        if(isInternetAvailable() == false){
+            planetTrackButton.enabled = false
+            planetTrackButton.setTitleColor(UIColor.grayColor(), forState: .Disabled)
+
+            imageGalleryButton.enabled = false
+            imageGalleryButton.setTitleColor(UIColor.grayColor(), forState: .Disabled)
+            
+        }
+        
+        
         
         planetImageView = UIImageView()
         
@@ -63,6 +81,32 @@ class HomeScreenViewController: UIViewController {
 
         
         
+    }
+    
+    func isInternetAvailable() -> Bool {
+        let networkReachability : Reachability = Reachability.reachabilityForInternetConnection()
+        let networkStatus : NetworkStatus = networkReachability.currentReachabilityStatus()
+        
+        if networkStatus == NotReachable {
+            print("No Internet")
+            return false
+        } else {
+            print("Internet Available")
+            return true
+        }
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if(isInternetAvailable() == false){
+            let alert = UIAlertController(title: "Alert", message: "Many Features of PlanetTrack Require an Internet Connection.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+
+            
+            
+        }
     }
     
     
@@ -197,7 +241,7 @@ class HomeScreenViewController: UIViewController {
     
         } else if (segue.identifier == "AboutSegue"){
             
-            destination.selectedIndex = 3
+//            destination.selectedIndex = 3
         }
         
     }

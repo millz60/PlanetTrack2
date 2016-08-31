@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9269C71C92C719361FABE28D /* Pods_PlanetTrack2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E343B31D3B04B0F1D10BDBF3 /* Pods_PlanetTrack2.framework */; };
 		C927D8491D7628540037ACF8 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C927D8481D7628530037ACF8 /* WebViewController.swift */; };
+		C927D84D1D76498F0037ACF8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C927D84C1D76498F0037ACF8 /* Reachability.m */; };
 		C950F56E1D6F6182008D3F43 /* SolarSystemFactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950F56D1D6F6182008D3F43 /* SolarSystemFactsNavigationController.swift */; };
 		C950F5701D6F61CF008D3F43 /* SolarSystemFactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950F56F1D6F61CF008D3F43 /* SolarSystemFactsViewController.swift */; };
 		C950F5721D6F7142008D3F43 /* FactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950F5711D6F7142008D3F43 /* FactsTableViewCell.swift */; };
@@ -33,6 +34,9 @@
 /* Begin PBXFileReference section */
 		5DB19682612ED6B25CE4CE73 /* Pods-PlanetTrack2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanetTrack2.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlanetTrack2/Pods-PlanetTrack2.release.xcconfig"; sourceTree = "<group>"; };
 		C927D8481D7628530037ACF8 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		C927D84A1D76498F0037ACF8 /* PlanetTrack2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlanetTrack2-Bridging-Header.h"; sourceTree = "<group>"; };
+		C927D84B1D76498F0037ACF8 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C927D84C1D76498F0037ACF8 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C950F56D1D6F6182008D3F43 /* SolarSystemFactsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolarSystemFactsNavigationController.swift; sourceTree = "<group>"; };
 		C950F56F1D6F61CF008D3F43 /* SolarSystemFactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolarSystemFactsViewController.swift; sourceTree = "<group>"; };
 		C950F5711D6F7142008D3F43 /* FactsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsTableViewCell.swift; sourceTree = "<group>"; };
@@ -156,11 +160,14 @@
 				C965C6451D6B7A8700896813 /* AppDelegate.swift */,
 				C965C6491D6B7A8700896813 /* Main.storyboard */,
 				C965C64E1D6B7A8700896813 /* LaunchScreen.storyboard */,
+				C927D84B1D76498F0037ACF8 /* Reachability.h */,
+				C927D84C1D76498F0037ACF8 /* Reachability.m */,
 				C965C6571D6B7B3100896813 /* Assets.xcassets */,
 				C965C6511D6B7A8700896813 /* Info.plist */,
 				C965C66D1D6CAB5B00896813 /* SkyTrackViewController.swift */,
 				C965C66F1D6CB24F00896813 /* RelativeDistancesViewController.swift */,
 				C927D8481D7628530037ACF8 /* WebViewController.swift */,
+				C927D84A1D76498F0037ACF8 /* PlanetTrack2-Bridging-Header.h */,
 			);
 			path = PlanetTrack2;
 			sourceTree = "<group>";
@@ -304,6 +311,7 @@
 				C950F5721D6F7142008D3F43 /* FactsTableViewCell.swift in Sources */,
 				C965C6701D6CB24F00896813 /* RelativeDistancesViewController.swift in Sources */,
 				C950F5781D6FB66A008D3F43 /* PlanetFactsViewController.swift in Sources */,
+				C927D84D1D76498F0037ACF8 /* Reachability.m in Sources */,
 				C950F5701D6F61CF008D3F43 /* SolarSystemFactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.theironyard.houston.PlanetTrack2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlanetTrack2/PlanetTrack2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -445,6 +454,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.theironyard.houston.PlanetTrack2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlanetTrack2/PlanetTrack2-Bridging-Header.h";
 			};
 			name = Release;
 		};

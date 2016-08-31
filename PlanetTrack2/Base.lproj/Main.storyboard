@@ -114,75 +114,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="0JI-dm-HGa"/>
                     <connections>
+                        <outlet property="imageGalleryButton" destination="5D8-a7-Jih" id="DWn-14-Gxw"/>
                         <outlet property="menuStackView" destination="Ep7-ee-k5c" id="he0-Gi-Bmf"/>
+                        <outlet property="planetTrackButton" destination="FI9-Wz-IBv" id="tve-Ao-BJ6"/>
                         <outlet property="planetTrackLabel" destination="h0g-Eb-y0k" id="hZz-1s-eOb"/>
+                        <outlet property="solarSystemFactsButton" destination="dRN-P0-bpR" id="uOJ-BQ-q7E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1225" y="399"/>
-        </scene>
-        <!--Web View Controller-->
-        <scene sceneID="Pvi-3i-0E8">
-            <objects>
-                <viewController id="gnc-f5-lgA" customClass="WebViewController" customModule="PlanetTrack2" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5x5-5G-lvc"/>
-                        <viewControllerLayoutGuide type="bottom" id="i82-d1-OfK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ePS-7k-NbL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B4F-am-SQD">
-                                <rect key="frame" x="0.0" y="64" width="600" height="494"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                            </webView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eiw-tE-W6U">
-                                <rect key="frame" x="0.0" y="514" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem systemItem="rewind" id="ufj-ll-Weg">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="backButtonPressed" destination="gnc-f5-lgA" id="MKM-Ma-ILh"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem systemItem="refresh" id="aMa-0O-h30">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="refreshPageButtonPressed" destination="gnc-f5-lgA" id="WPk-6D-ZmP"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Lfe-qi-I0z"/>
-                                    <barButtonItem systemItem="fastForward" id="8zY-31-DJS">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="forwardButtonPressed" destination="gnc-f5-lgA" id="WAf-vJ-358"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="B4F-am-SQD" firstAttribute="leading" secondItem="ePS-7k-NbL" secondAttribute="leading" id="27d-AJ-eIG"/>
-                            <constraint firstItem="eiw-tE-W6U" firstAttribute="leading" secondItem="B4F-am-SQD" secondAttribute="leading" id="3yd-JJ-rwk"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="B4F-am-SQD" secondAttribute="bottom" constant="42" id="GxZ-OZ-xSZ"/>
-                            <constraint firstItem="B4F-am-SQD" firstAttribute="top" secondItem="5x5-5G-lvc" secondAttribute="bottom" id="Mue-VK-04f"/>
-                            <constraint firstItem="eiw-tE-W6U" firstAttribute="trailing" secondItem="B4F-am-SQD" secondAttribute="trailing" id="Pzz-4q-PIS"/>
-                            <constraint firstAttribute="trailing" secondItem="B4F-am-SQD" secondAttribute="trailing" id="iIv-fI-908"/>
-                            <constraint firstItem="eiw-tE-W6U" firstAttribute="top" secondItem="B4F-am-SQD" secondAttribute="bottom" constant="-44" id="vOI-2p-ryq"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="pWj-DM-An9"/>
-                    <connections>
-                        <outlet property="webView" destination="B4F-am-SQD" id="OIW-dR-Pfb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SmW-gy-68D" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4327" y="2316"/>
         </scene>
         <!--Image Gallery Table View Controller-->
         <scene sceneID="mxK-QF-4cS">
@@ -702,6 +643,7 @@
                         <outlet property="mercuryButton" destination="fcV-m6-67v" id="XQF-as-KAM"/>
                         <outlet property="neptuneButton" destination="xqt-Rf-EH5" id="w3Y-y9-rKu"/>
                         <outlet property="planetsDisplayText" destination="GA1-AF-pIx" id="q09-Cd-ZGv"/>
+                        <outlet property="planetsStackView" destination="M5N-Jx-Meo" id="9ue-9Q-Bq4"/>
                         <outlet property="rightSelectedPlanet" destination="6qL-OF-2HA" id="AW3-Fw-u8g"/>
                         <outlet property="saturnButton" destination="bGS-L0-XBh" id="3ck-13-4iT"/>
                         <outlet property="sunButton" destination="IMS-JT-Fnv" id="CsJ-YC-ixk"/>
@@ -767,7 +709,6 @@
                         <segue destination="Wy2-Qp-dgV" kind="relationship" relationship="viewControllers" id="rDS-Gy-jcQ"/>
                         <segue destination="mUV-Lg-zpN" kind="relationship" relationship="viewControllers" id="r5B-Xs-ftk"/>
                         <segue destination="sbS-lM-NzK" kind="relationship" relationship="viewControllers" id="M9E-4o-nWL"/>
-                        <segue destination="rH8-Bp-F4i" kind="relationship" relationship="viewControllers" id="PIr-U3-F6n"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQn-ep-akJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1098,25 +1039,6 @@
             </objects>
             <point key="canvasLocation" x="2703" y="1584"/>
         </scene>
-        <!--About-->
-        <scene sceneID="O2T-OG-OmU">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rH8-Bp-F4i" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" image="info" id="Qhh-IG-5Rb"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9YD-AL-NUt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gnc-f5-lgA" kind="relationship" relationship="rootViewController" id="6iE-wP-hIb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fva-7J-L0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3515" y="2316"/>
-        </scene>
     </scenes>
     <resources>
         <image name="background2" width="1275" height="850"/>
@@ -1125,7 +1047,6 @@
         <image name="background5" width="1402" height="788"/>
         <image name="background6" width="1368" height="912"/>
         <image name="earth" width="800" height="800"/>
-        <image name="info" width="30" height="30"/>
         <image name="jupiter" width="414" height="400"/>
         <image name="mars" width="1268" height="1266"/>
         <image name="mercury" width="670" height="670"/>

@@ -35,6 +35,7 @@ class PlanetTrackViewController: UIViewController {
     @IBOutlet weak var neptuneButton: UIButton!
     @IBOutlet weak var leftSelectedPlanet: UIButton!
     @IBOutlet weak var rightSelectedPlanet: UIButton!
+    @IBOutlet weak var planetsStackView: UIStackView!
     
     var leftPlanet:  String!
     var rightPlanet: String?
@@ -104,6 +105,7 @@ class PlanetTrackViewController: UIViewController {
     var uranusToNeptuneData: NSDictionary!
     
     var targetView: UIImageView!
+    
 
 
     // Begin Code
@@ -115,8 +117,16 @@ class PlanetTrackViewController: UIViewController {
         self.title = "PlanetTrack"
         self.planetsDisplayText.text = "Sun to Mercury"
         
-        
-        downloadPlanetData()
+        if(self.isInternetAvailable()){
+            downloadPlanetData()
+        } else {
+            let alert = UIAlertController(title: "Alert", message: "PlanetTrack Requires an Internet Connection.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            self.planetsStackView.userInteractionEnabled = false
+            self.distanceLabel.text = "69,651,689.62544"
+            
+        }
         
         sunToMercuryData = NSDictionary(); sunToVenusData = NSDictionary(); sunToEarthData = NSDictionary(); sunToMarsData = NSDictionary(); sunToJupiterData = NSDictionary();
         sunToSaturnData = NSDictionary(); sunToUranusData = NSDictionary(); sunToNeptuneData = NSDictionary();
@@ -152,12 +162,25 @@ class PlanetTrackViewController: UIViewController {
         
         self.view.addSubview(self.targetView)
         
-
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    func isInternetAvailable() -> Bool {
+        let networkReachability : Reachability = Reachability.reachabilityForInternetConnection()
+        let networkStatus : NetworkStatus = networkReachability.currentReachabilityStatus()
+        
+        if networkStatus == NotReachable {
+            return false
+        } else {
+            return true
+        }
+        
+    }
+    
+
     
     
     @IBAction func leftPlanetSelected() {
@@ -333,6 +356,8 @@ class PlanetTrackViewController: UIViewController {
         }
         
     }
+    
+
     
     private func downloadPlanetData() {
         
