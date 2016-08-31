@@ -222,6 +222,7 @@ class PlanetTrackViewController: UIViewController {
                 self.leftSelectedPlanet.setTitle(planetName, forState: .Normal)
                 self.planetsDisplayText.text = "\(leftSelectedPlanet.titleLabel!.text!) to \(rightSelectedPlanet.titleLabel!.text!)"
                 
+                
                 UIView.animateWithDuration(0.5, animations: {
                     self.targetView.alpha = 1
                 }) { (g) in

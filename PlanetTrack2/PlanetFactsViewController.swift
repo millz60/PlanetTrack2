@@ -73,7 +73,7 @@ class PlanetFactsViewController: UIViewController, UITextFieldDelegate, UIWebVie
             self.setupWeightScreen()
             self.addDoneButton()
             
-        } else if(self.categoryTitle! == "Planet Composition And Temperature") {
+        } else if(self.categoryTitle! == "Detailed Planet Stats") {
             
             self.planetsStackView.hidden = false
             self.behindTextImage.hidden = true
@@ -83,7 +83,7 @@ class PlanetFactsViewController: UIViewController, UITextFieldDelegate, UIWebVie
             
             
         
-        } else if(self.categoryTitle! == "Missions And Spacecraft"){
+        } else if(self.categoryTitle! == "Missions And Spacecraft" || self.categoryTitle! == "Why We See The Same Side Of The Moon" || self.categoryTitle == "The Oort Cloud" || self.categoryTitle! == "Planet X: A New Planet?" || self.categoryTitle == "The Search For Extraterrestrial Life"){
             
             self.planetsStackView.hidden = true
             self.behindTextImage.hidden = true
@@ -153,9 +153,29 @@ class PlanetFactsViewController: UIViewController, UITextFieldDelegate, UIWebVie
         self.missionsWebView.scalesPageToFit = true
         self.missionsWebView.contentMode = UIViewContentMode.ScaleAspectFit
         
-        let url = NSURL(string: "https://solarsystem.nasa.gov/missions/")
+        var url = NSURL()
         
-        missionsWebView.loadRequest(NSURLRequest(URL: url!))
+        if (self.categoryTitle! == "Missions And Spacecraft"){
+        
+             url = NSURL(string: "https://solarsystem.nasa.gov/missions/")!
+            
+        } else if (self.categoryTitle! == "Why We See The Same Side Of The Moon") {
+            
+             url = NSURL(string: "https://en.wikipedia.org/w/index.php?title=Tidal_locking&oldid=736526818")!
+        } else if (self.categoryTitle! == "The Oort Cloud"){
+            
+            url = NSURL(string: "https://solarsystem.nasa.gov/planets/oort")!
+        } else if (self.categoryTitle! == "Planet X: A New Planet?"){
+            
+            url = NSURL(string: "https://solarsystem.nasa.gov/planets/planetx")!
+        } else if (self.categoryTitle! == "The Search For Extraterrestrial Life") {
+            
+            url = NSURL(string: "https://en.wikipedia.org/wiki/Extraterrestrial_life")!
+        }
+        
+        
+        
+        missionsWebView.loadRequest(NSURLRequest(URL: url))
         
         let backButton = UIButton(frame: CGRect(x: 0, y: self.view.frame.size.height - 100, width: 75, height: 50))
         backButton.setTitle("◄", forState: .Normal)
@@ -163,6 +183,10 @@ class PlanetFactsViewController: UIViewController, UITextFieldDelegate, UIWebVie
         backButton.tintColor = UIColor.whiteColor()
         backButton.backgroundColor = UIColor(red: 0.0/255.0, green: 102.0/255.0, blue: 153.0/255.0, alpha: 1.0)
         backButton.addTarget(self, action: #selector(goBack), forControlEvents: .TouchUpInside)
+        backButton.layer.cornerRadius = 5.0
+        backButton.layer.borderWidth = 2.0
+        backButton.layer.borderColor = UIColor.whiteColor().CGColor
+        backButton.layer.masksToBounds = true
         
         let forwardButton = UIButton(frame: CGRect(x: self.view.frame.size.width - 75, y: self.view.frame.size.height - 100, width: 75, height: 50))
         forwardButton.setTitle("►", forState: .Normal)
@@ -170,6 +194,10 @@ class PlanetFactsViewController: UIViewController, UITextFieldDelegate, UIWebVie
         forwardButton.tintColor = UIColor.whiteColor()
         forwardButton.backgroundColor = UIColor(red: 0.0/255.0, green: 102.0/255.0, blue: 153.0/255.0, alpha: 1.0)
         forwardButton.addTarget(self, action: #selector(goForward), forControlEvents: .TouchUpInside)
+        forwardButton.layer.cornerRadius = 5.0
+        forwardButton.layer.borderWidth = 2.0
+        forwardButton.layer.borderColor = UIColor.whiteColor().CGColor
+        forwardButton.layer.masksToBounds = true
         
         let refreshButton = UIButton(frame: CGRect(x: self.view.frame.size.width/2 - (75/2), y: self.view.frame.size.height - 100, width: 75, height: 50))
         refreshButton.setTitle("↻", forState: .Normal)
@@ -177,6 +205,10 @@ class PlanetFactsViewController: UIViewController, UITextFieldDelegate, UIWebVie
         refreshButton.tintColor = UIColor.whiteColor()
         refreshButton.backgroundColor = UIColor(red: 0.0/255.0, green: 102.0/255.0, blue: 153.0/255.0, alpha: 1.0)
         refreshButton.addTarget(self, action: #selector(refresh), forControlEvents: .TouchUpInside)
+        refreshButton.layer.cornerRadius = 5.0
+        refreshButton.layer.borderWidth = 2.0
+        refreshButton.layer.borderColor = UIColor.whiteColor().CGColor
+        refreshButton.layer.masksToBounds = true
         
         loadingLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 50, y: (self.view.frame.size.height/2) - 25, width: 100, height: 50))
         loadingLabel.font = UIFont(name:"AvenirNextCondensed-DemiBold", size:20.0)
@@ -184,6 +216,8 @@ class PlanetFactsViewController: UIViewController, UITextFieldDelegate, UIWebVie
         loadingLabel.textAlignment = .Center
         loadingLabel.textColor = UIColor.whiteColor()
         loadingLabel.backgroundColor = UIColor(red: 0.0/255.0, green: 102.0/255.0, blue: 153.0/255.0, alpha: 1.0)
+        loadingLabel.layer.cornerRadius = 5.0
+        loadingLabel.layer.masksToBounds = true
         
         
         if UIScreen.mainScreen().bounds.size.height > 414{
@@ -327,7 +361,7 @@ class PlanetFactsViewController: UIViewController, UITextFieldDelegate, UIWebVie
             sourceLabel.frame = CGRect(x: (compositionSuperView.frame.size.width/2) + 15, y: (compositionSuperView.frame.size.height/2)-(((compositionSuperView.frame.size.height/10)*10-10)/2) - 1, width: 250, height: 20)
         } else if UIScreen.mainScreen().bounds.size.height > 414{
             scrollLabel.frame = CGRect(x: (compositionSuperView.frame.size.width/2)+10, y: (compositionSuperView.frame.size.height) - 105, width: 250, height: 20)
-            compositionSuperView.frame = CGRect(x: 10, y: 75, width: (self.view.frame.size.width)-20, height: (self.view.frame.size.height)-180)
+            compositionSuperView.frame = CGRect(x: 10, y: 75, width: (self.view.frame.size.width)-20, height: (self.view.frame.size.height)-185)
             planetImageView.frame = CGRect(x: 90, y: (compositionSuperView.frame.size.height/2)/2, width: 300, height: 300)
         } else if UIScreen.mainScreen().bounds.size.height == 375{
             
@@ -446,7 +480,7 @@ class PlanetFactsViewController: UIViewController, UITextFieldDelegate, UIWebVie
             
             planetNameLabel.attributedText = attributedString
             
-            compositionTextView.text = "Discovery\nDate of Discovery: Unknown\nDiscovered By: Known by the Ancients\n\n\nOrbit Size Around Sun\nMetric: 227,943,824 km\nEnglish: 141,637,725 miles\nScientific Notation: 2.2794382 x 10^8 km\nAstronomical Units: 1.523662 A.U.\nBy Comparison: 1.524 x Earth\n\n\nMean Orbit Velocity\nMetric: 86,677 km/h\nEnglish: 53,858 mph\nScientific Notation: 2.4077 x 10^4 m/s\nBy Comparison: 0.808 x Earth\n\n\nOrbit Eccentricity\n0.0933941\nBy Comparison: 5.589 x Earth\n\n\nEquatorial Inclination\n25.2\n\n\nEquatorial Radius\nMetric: 3,389.5 km\nEnglish: 2,106.1 miles\nScientific Notation: 3.3895 x 10^3 km\nBy Comparison: 0.5320 x Earth\n\n\nEquatorial Circumference\nMetric: 21,296.9 km\nEnglish: 13,233.3 miles\nScientific Notation: 2.12969 x 10^4 km\n\n\nVolume\nMetric: 163,115,609,799 km^3\nEnglish: 39,133,515,914 miles^3\nScientific Notation: 1.63116 X 1011 km^3\nBy Comparison: 0.151 x Earth\n\n\nMass\nMetric: 641,693,000,000,000,000,000,000 kg\nScientific Notation: 6.4169 x 1023 kg\nBy Comparison: 0.107 x Earth\n\n\nDensity\nMetric: 3.934 g/cm3\nBy Comparison: 0.714 x Earth\n\n\nSurface Area\nMetric: 144,371,391 km^2\nEnglish: 55,742,106 square miles\nScientific Notation: 1.4437 x 10^8 km^2\nBy Comparison: 0.283 x Earth\n\n\nSurface Gravity\nMetric: 3.71 m/s^2\nEnglish: 12.2 ft/s^2\nBy Comparison: If you weigh 100 pounds on Earth, you would weigh 38 pounds on Mars.\n\n\nEscape Velocity\nMetric: 18,108 km/h\nEnglish: 11,252 mph\nScientific Notation: 5.030 x 10^3 m/s\nBy Comparison: Escape velocity of Earth is 25,030 mph.\n\n\nSidereal Rotation Period\n1.026 Earth Days\n24.623 Hours\nBy Comparison: Earth's rotation period is 23.934 hours.\n\n\nSurface Temperature\nMetric: -153 to +20 °C\nEnglish: -225 to +70 °F\nScientific Notation: 120 to 293 K\n\n\nAtmospheric Constituents\nCarbon Dioxide, Nitrogen, Argon\nScientific Notation: CO2, N2, Ar\nBy Comparison: CO2 is responsible for the Greenhouse Effect and is used for carbonation in beverages.\nN2 is 80% of Earth's air and is a crucial element in DNA. Ar is used to make blue neon light bulbs.\n"
+            compositionTextView.text = "Discovery\nDate of Discovery: Unknown\nDiscovered By: Known by the Ancients\n\n\nOrbit Size Around Sun\nMetric: 227,943,824 km\nEnglish: 141,637,725 miles\nScientific Notation: 2.2794382 x 10^8 km\nAstronomical Units: 1.523662 A.U.\nBy Comparison: 1.524 x Earth\n\n\nMean Orbit Velocity\nMetric: 86,677 km/h\nEnglish: 53,858 mph\nScientific Notation: 2.4077 x 10^4 m/s\nBy Comparison: 0.808 x Earth\n\n\nOrbit Eccentricity\n0.0933941\nBy Comparison: 5.589 x Earth\n\n\nEquatorial Inclination\n25.2\n\n\nEquatorial Radius\nMetric: 3,389.5 km\nEnglish: 2,106.1 miles\nScientific Notation: 3.3895 x 10^3 km\nBy Comparison: 0.5320 x Earth\n\n\nEquatorial Circumference\nMetric: 21,296.9 km\nEnglish: 13,233.3 miles\nScientific Notation: 2.12969 x 10^4 km\n\n\nVolume\nMetric: 163,115,609,799 km^3\nEnglish: 39,133,515,914 miles^3\nScientific Notation: 1.63116 X 1011 km^3\nBy Comparison: 0.151 x Earth\n\n\nMass\nMetric: 641,693,000,000,000,000,000,000 kg\nScientific Notation: 6.4169 x 10^23 kg\nBy Comparison: 0.107 x Earth\n\n\nDensity\nMetric: 3.934 g/cm3\nBy Comparison: 0.714 x Earth\n\n\nSurface Area\nMetric: 144,371,391 km^2\nEnglish: 55,742,106 square miles\nScientific Notation: 1.4437 x 10^8 km^2\nBy Comparison: 0.283 x Earth\n\n\nSurface Gravity\nMetric: 3.71 m/s^2\nEnglish: 12.2 ft/s^2\nBy Comparison: If you weigh 100 pounds on Earth, you would weigh 38 pounds on Mars.\n\n\nEscape Velocity\nMetric: 18,108 km/h\nEnglish: 11,252 mph\nScientific Notation: 5.030 x 10^3 m/s\nBy Comparison: Escape velocity of Earth is 25,030 mph.\n\n\nSidereal Rotation Period\n1.026 Earth Days\n24.623 Hours\nBy Comparison: Earth's rotation period is 23.934 hours.\n\n\nSurface Temperature\nMetric: -153 to +20 °C\nEnglish: -225 to +70 °F\nScientific Notation: 120 to 293 K\n\n\nAtmospheric Constituents\nCarbon Dioxide, Nitrogen, Argon\nScientific Notation: CO2, N2, Ar\nBy Comparison: CO2 is responsible for the Greenhouse Effect and is used for carbonation in beverages.\nN2 is 80% of Earth's air and is a crucial element in DNA. Ar is used to make blue neon light bulbs.\n"
             
         } else if(self.selectedPlanet == "Jupiter"){
             

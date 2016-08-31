@@ -21,24 +21,22 @@ class SolarSystemFactsViewController: UIViewController, UITableViewDelegate {
 
         factsArray.append("10 Facts About Each Planet")
         factsArray.append("Your Weight on Other Planets")
-        factsArray.append("Planet Composition and Temperature")
+        factsArray.append("Detailed Planet Stats")
         factsArray.append("Missions and Spacecraft")
-        factsArray.append("Earth's Magnetic Field")
-        factsArray.append("Man-made Spacecraft")
-        factsArray.append("Our Place in the Milky Way")
+        factsArray.append("Why We See The Same Side Of The Moon")
+        factsArray.append("The Oort Cloud")
+        factsArray.append("Planet X: A New Planet?")
         factsArray.append("The Search for Extraterrestrial Life")
-        factsArray.append("Skywatching Guide")
         
         imagesArray.append("planetsMosaic")
         imagesArray.append("astronaut")
         imagesArray.append("planetaryOrbits")
         imagesArray.append("juno")
-        imagesArray.append("earthsVisual")
-        imagesArray.append("magneticField")
-        imagesArray.append("background6")
+        imagesArray.append("moon")
+        imagesArray.append("background2")
+        imagesArray.append("planetX")
         imagesArray.append("microbes")
-        imagesArray.append("skywatching")
-        
+
         self.factsTableView.backgroundColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.5)
         
         self.allCells = NSMutableArray()

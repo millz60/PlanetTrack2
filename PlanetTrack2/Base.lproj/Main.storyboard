@@ -125,6 +125,67 @@
             </objects>
             <point key="canvasLocation" x="1225" y="399"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="rMe-OV-gqv">
+            <objects>
+                <viewController id="SI3-nZ-xxF" customClass="AboutViewController" customModule="PlanetTrack2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gwg-a1-Hfq"/>
+                        <viewControllerLayoutGuide type="bottom" id="AJg-xv-30c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9D1-V0-7jN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background5" translatesAutoresizingMaskIntoConstraints="NO" id="J36-HI-59j">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingScreenIcon" translatesAutoresizingMaskIntoConstraints="NO" id="gXr-QA-6d2">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="fIF-WD-oUi"/>
+                                    <constraint firstAttribute="width" constant="200" id="tsy-iY-K2j"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JXL-fd-1JA">
+                                <rect key="frame" x="20" y="72" width="560" height="471"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gXr-QA-6d2" firstAttribute="centerX" secondItem="9D1-V0-7jN" secondAttribute="centerX" id="7Zy-BM-7Mb"/>
+                            <constraint firstItem="JXL-fd-1JA" firstAttribute="centerX" secondItem="J36-HI-59j" secondAttribute="centerX" id="B46-gm-SMe"/>
+                            <constraint firstItem="gXr-QA-6d2" firstAttribute="centerY" secondItem="9D1-V0-7jN" secondAttribute="centerY" id="B7O-uA-KKY"/>
+                            <constraint firstItem="J36-HI-59j" firstAttribute="top" secondItem="9D1-V0-7jN" secondAttribute="top" id="GCf-0o-6Ot"/>
+                            <constraint firstItem="JXL-fd-1JA" firstAttribute="leading" secondItem="9D1-V0-7jN" secondAttribute="leadingMargin" id="N9n-My-c2v"/>
+                            <constraint firstItem="gXr-QA-6d2" firstAttribute="centerX" secondItem="9D1-V0-7jN" secondAttribute="centerX" id="PDq-As-BVA"/>
+                            <constraint firstItem="J36-HI-59j" firstAttribute="bottom" secondItem="AJg-xv-30c" secondAttribute="top" id="UlR-Zo-Qts"/>
+                            <constraint firstItem="gXr-QA-6d2" firstAttribute="centerY" secondItem="9D1-V0-7jN" secondAttribute="centerY" id="nsT-fZ-aLm"/>
+                            <constraint firstItem="J36-HI-59j" firstAttribute="leading" secondItem="9D1-V0-7jN" secondAttribute="leading" id="r18-Qy-PjY"/>
+                            <constraint firstAttribute="trailing" secondItem="J36-HI-59j" secondAttribute="trailing" id="tLv-r4-dlj"/>
+                            <constraint firstItem="JXL-fd-1JA" firstAttribute="top" secondItem="Gwg-a1-Hfq" secondAttribute="bottom" constant="8" symbolic="YES" id="wFZ-Iu-bD1"/>
+                            <constraint firstItem="AJg-xv-30c" firstAttribute="top" secondItem="JXL-fd-1JA" secondAttribute="bottom" constant="8" symbolic="YES" id="yxw-YX-TW8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mu1-ao-SKC">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Main Menu" id="4Hb-Uo-1W1">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="8x7-KL-pnC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="aboutTextView" destination="JXL-fd-1JA" id="BIo-2N-oyt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Baz-LK-293" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="1328"/>
+        </scene>
         <!--Image Gallery Table View Controller-->
         <scene sceneID="mxK-QF-4cS">
             <objects>
@@ -188,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hun-Kw-OEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3515" y="824"/>
+            <point key="canvasLocation" x="4327" y="824"/>
         </scene>
         <!--Image Gallery Test View Controller-->
         <scene sceneID="vGa-B0-6uz">
@@ -304,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppQ-L2-LwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4212" y="824"/>
+            <point key="canvasLocation" x="5024" y="824"/>
         </scene>
         <!--Full Screen Image View Controller-->
         <scene sceneID="Zzq-wr-nzw">
@@ -354,7 +415,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ge7-yg-rUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4953" y="824"/>
+            <point key="canvasLocation" x="5765" y="824"/>
         </scene>
         <!--PlanetTrack-->
         <scene sceneID="4Rf-5u-VwA">
@@ -628,7 +689,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="question" id="UPj-Hu-GqY">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="U3F-jp-f9R" kind="show" id="nd4-0p-ldE"/>
                             </connections>
@@ -709,6 +770,7 @@
                         <segue destination="Wy2-Qp-dgV" kind="relationship" relationship="viewControllers" id="rDS-Gy-jcQ"/>
                         <segue destination="mUV-Lg-zpN" kind="relationship" relationship="viewControllers" id="r5B-Xs-ftk"/>
                         <segue destination="sbS-lM-NzK" kind="relationship" relationship="viewControllers" id="M9E-4o-nWL"/>
+                        <segue destination="nWV-pR-DNd" kind="relationship" relationship="viewControllers" id="lsc-5M-ySA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQn-ep-akJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -751,7 +813,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLa-D2-7t9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2703" y="824"/>
+            <point key="canvasLocation" x="3515" y="824"/>
         </scene>
         <!--Solar System Facts-->
         <scene sceneID="GHu-fp-9Kb">
@@ -841,7 +903,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bS-Wv-2Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3515" y="1584"/>
+            <point key="canvasLocation" x="4327" y="1584"/>
         </scene>
         <!--Planet Facts View Controller-->
         <scene sceneID="sym-22-XJo">
@@ -1018,7 +1080,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZv-EE-bkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4212" y="1584"/>
+            <point key="canvasLocation" x="5024" y="1584"/>
         </scene>
         <!--Solar System Facts-->
         <scene sceneID="hbs-Yx-C2K">
@@ -1037,7 +1099,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NK7-nI-Tfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2703" y="1584"/>
+            <point key="canvasLocation" x="3515" y="1584"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="qle-JU-7Yt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nWV-pR-DNd" customClass="AboutNavigationController" customModule="PlanetTrack2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About" image="info" id="I1x-NK-uwc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fl2-lF-OJ9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SI3-nZ-xxF" kind="relationship" relationship="rootViewController" id="SOi-7G-TBz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xDL-AC-MRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1931" y="1328"/>
         </scene>
     </scenes>
     <resources>
@@ -1047,7 +1128,9 @@
         <image name="background5" width="1402" height="788"/>
         <image name="background6" width="1368" height="912"/>
         <image name="earth" width="800" height="800"/>
+        <image name="info" width="30" height="30"/>
         <image name="jupiter" width="414" height="400"/>
+        <image name="loadingScreenIcon" width="347" height="347"/>
         <image name="mars" width="1268" height="1266"/>
         <image name="mercury" width="670" height="670"/>
         <image name="neptune" width="594" height="594"/>

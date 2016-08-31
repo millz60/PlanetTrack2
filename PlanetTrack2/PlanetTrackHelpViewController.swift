@@ -80,10 +80,15 @@ class PlanetTrackHelpViewController: UIViewController {
             
             tutorialOverlay.frame = CGRect(x: 25, y: (self.view.frame.size.height/2)-90, width: 225, height: 130)
             tutorialText1.frame = CGRect(x: self.tutorialView.frame.size.width - 325, y: 50, width: 350, height: 35)
+            tutorialText1.font = UIFont(name: "Avenir Next Condensed Demi Bold", size: 14.0)
             tutorialText2.frame = CGRect(x: self.tutorialView.frame.size.width - 325, y: 85, width: 350, height: 35)
+            tutorialText2.font = UIFont(name: "Avenir Next Condensed Demi Bold", size: 14.0)
             tutorialText3.frame = CGRect(x: self.tutorialView.frame.size.width - 325, y: 120, width: 350, height: 35)
+            tutorialText3.font = UIFont(name: "Avenir Next Condensed Demi Bold", size: 14.0)
             tutorialText4.frame = CGRect(x: self.tutorialView.frame.size.width - 325, y: 155, width: 350, height: 35)
+            tutorialText4.font = UIFont(name: "Avenir Next Condensed Demi Bold", size: 14.0)
             tutorialText5.frame = CGRect(x: self.tutorialView.frame.size.width - 325, y: 190, width: 350, height: 35)
+            tutorialText5.font = UIFont(name: "Avenir Next Condensed Demi Bold", size: 14.0)
             
             
         }
