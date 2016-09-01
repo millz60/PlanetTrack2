@@ -26,6 +26,7 @@ class ImageGalleryTestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.prevButton.hidden = true
         print(self.sentImageDictionary)
 
         let photo = String(self.sentImageDictionary!.allKeys.first!)
@@ -44,6 +45,9 @@ class ImageGalleryTestViewController: UIViewController {
         
         allKeys = self.sentImageDictionary.allKeys
         allValues = self.sentImageDictionary.allValues
+        
+
+        
         
         // Get the progress (activity) indicator to work
         
@@ -65,6 +69,10 @@ class ImageGalleryTestViewController: UIViewController {
         
         self.prevButton.enabled = true
         
+        if(self.currentImageNumber + 2 == self.sentImageDictionaryLength) {
+            self.nextButton.hidden = true
+        }
+        
         if (self.currentImageNumber < self.sentImageDictionaryLength-1){
             
             self.currentImageNumber = self.currentImageNumber + 1
@@ -75,12 +83,13 @@ class ImageGalleryTestViewController: UIViewController {
             self.sentText.text = String(self.allValues[currentImageNumber])
             self.imageCountDisplay.text = "Image \(self.currentImageNumber+1)/\(self.sentImageDictionaryLength). Images/Captions Courtesy NASA/JPL-Caltech."
             self.sentText.scrollRangeToVisible(NSMakeRange(0,0))
-
+            self.prevButton.hidden = false
             
         
         } else if (self.currentImageNumber == self.sentImageDictionaryLength-2){
             
             self.nextButton.enabled = false
+            self.nextButton.hidden = true
         }
     }
     
@@ -100,12 +109,18 @@ class ImageGalleryTestViewController: UIViewController {
             self.sentText.text = String(self.allValues[currentImageNumber])
             self.imageCountDisplay.text = "Image \(self.currentImageNumber+1)/\(self.sentImageDictionaryLength). Images/Captions Courtesy NASA/JPL-Caltech."
             self.sentText.scrollRangeToVisible(NSMakeRange(0,0))
+            self.nextButton.hidden = false
 
 
             
         } else if (self.currentImageNumber == 0){
             
             self.prevButton.enabled = false
+//            self.prevButton.hidden = true
+        }
+        
+        if(self.currentImageNumber == 0) {
+            self.prevButton.hidden = true
         }
         
         

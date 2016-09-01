@@ -21,7 +21,7 @@ class SolarSystemFactsViewController: UIViewController, UITableViewDelegate {
 
         factsArray.append("10 Facts About Each Planet")
         factsArray.append("Your Weight on Other Planets")
-        factsArray.append("Detailed Planet Stats")
+        factsArray.append("Detailed Planet Statistics")
         factsArray.append("Missions and Spacecraft")
         factsArray.append("Why We See The Same Side Of The Moon")
         factsArray.append("The Oort Cloud")

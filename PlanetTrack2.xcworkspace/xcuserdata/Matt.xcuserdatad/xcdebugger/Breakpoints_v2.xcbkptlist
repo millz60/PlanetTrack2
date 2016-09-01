@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlanetTrack2/PlanetFactsViewController.swift"
-            timestampString = "494357441.083238"
+            timestampString = "494437535.812002"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2261"
-            endingLineNumber = "2261"
+            startingLineNumber = "2263"
+            endingLineNumber = "2263"
             landmarkName = "setupWeightScreen()"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlanetTrack2/PlanetFactsViewController.swift"
-            timestampString = "494357441.083238"
+            timestampString = "494437535.812002"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2385"
-            endingLineNumber = "2385"
+            startingLineNumber = "2387"
+            endingLineNumber = "2387"
             landmarkName = "animateTextField(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlanetTrack2/PlanetFactsViewController.swift"
-            timestampString = "494357441.083238"
+            timestampString = "494437535.812002"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "388"
-            endingLineNumber = "388"
+            startingLineNumber = "390"
+            endingLineNumber = "390"
             landmarkName = "changeCompositionScreen()"
             landmarkType = "5">
          </BreakpointContent>
@@ -86,7 +86,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlanetTrack2/PlanetFactsViewController.swift"
@@ -96,6 +96,22 @@
             startingLineNumber = "47"
             endingLineNumber = "47"
             landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlanetTrack2/ImageGalleryTestViewController.swift"
+            timestampString = "494388373.820402"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "nextImageButtonPressed()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
