@@ -55,7 +55,6 @@ class PlanetFactsViewController: UIViewController, UITextFieldDelegate, UIWebVie
         self.behindTextImage.image = self.backgroundImage
         self.selectedPlanet = "Sun"
         
-        
         self.planetsStackView.hidden = false
         
         if(self.categoryTitle! == "10 Facts About Each Planet"){

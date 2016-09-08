@@ -218,7 +218,7 @@
 				TargetAttributes = {
 					C965C6411D6B7A8700896813 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = LM6Y4TJMJG;
+						DevelopmentTeam = US26684456;
 					};
 				};
 			};
@@ -445,7 +445,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PlanetTrack2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mattmilner.houston.PlanetTrack2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattmilner.houston.PlanetTrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PlanetTrack2/PlanetTrack2-Bridging-Header.h";
@@ -463,7 +463,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PlanetTrack2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mattmilner.houston.PlanetTrack2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattmilner.houston.PlanetTrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PlanetTrack2/PlanetTrack2-Bridging-Header.h";
